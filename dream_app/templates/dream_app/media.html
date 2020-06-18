@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+<style>
+    body {
+        background-image: url(/static/dream_app/images/white_hoop.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden;
+        overflow-y:hidden
+        /* background: white; */
+
+    }
+
+    footer {
+        /* bottom: 0px; */
+        bottom: -85px;
+        /* height: 60px; */
+        position: unset;
+        width: 100%;
+        margin-top: 1px;
+    }
+    #myFooter {
+    padding-top: 25px;
+}
+</style>
+
+
+<!-- <div class="container-fluid" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="dreams-font"
+                style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:35pt; color:rgba(3, 27, 38, 0.8);">
+                Harlem Dreams Media</h2>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid" id="media-frame">
+    <div class="row">
+        <div class="col-sm-9 order-sm-12 vid-main">
+            <div class="video-container"><iframe class="video-media"
+                    src="https://www.youtube-nocookie.com/embed/J7wx-U_3AeI?rel=0&amp;" frameborder="0"
+                    allowfullscreen></iframe>
+                    <h1 class="video-header">Video Description</h1>
+                    <p class="vid-bottom-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minima.</p>
+            </div>
+        </div>
+        <div class="col-sm-3 order-sm-1 vid-list">
+            <div class="row">
+                <div class="list">
+                    <!-- <img class="vid-prebox" src="{% static 'dream_app/images/logo2.png' %}" alt=""> -->
+                    <h4 class="vid-title">Test</h4>
+                    <p class="vid-desc">Lorem, ipsum.</p>
+                    <p class="vid-time"><i class="fas fa-play"></i>&nbsp;10.26</p>
+                </div>
+         
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

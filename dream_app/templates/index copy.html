@@ -1,0 +1,347 @@
+   {% extends 'dream_app/base.html' %} {% block body %} {% load staticfiles %}
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<style>
+  .sexy-line {
+    height: 2px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#1981c6), to(#034787), color-stop(50%, white));
+    width: 100%;
+    display: block;
+    float: right;
+  }
+
+
+  .horizontal-line {
+    border: white solid 5px;
+  }
+
+  @media screen and (max-width: 576px) {
+    #pushup {
+      margin-bottom: 15px
+    }
+  }
+</style>
+<div class="container-fluid boc">
+  <div class="row sub-row">
+    <div class="col-sm-6 col-md-6 social  d-none d-sm-block" style="font-family: Arial, Helvetica, sans-serif">
+      <div class="phone-f vcenter">
+        <i class="fa fa-phone" style="color: white;"></i>
+        <span id="phone">{{phone}}</span>
+        <!-- <span id="phone">(702) 608-3191</span> -->
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 social d-none d-sm-block">
+      <ul id="top-social" class="vcenter2">
+        <li>
+          <a href="#" target="_blank">
+            <img src="{% static 'dream_app/images/facebook.png' %}" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="http://instagram.com/theharlemdreams" target="_blank">
+            <img src="{% static 'dream_app/images/instagram.png' %}" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/theharlemdreams" target="_blank">
+            <img src="{% static 'dream_app/images/twitter.png' %}" style="margin-left: 10px;" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Notices -->
+{% for n in notice%}
+    {% if n.active == True %}
+<div class="container-fluid hide-notice" style="color: {{n.color}}">
+  <class class="row">
+    <div class="col-sm-12 notice">
+      
+      <span id="notice-exit"><i class="fa fa-window-close no-x" aria-hidden="true"></i></span>
+      <h5>{{n.name}}</h5>
+      <p style="text-align: center;">{{n.message}}</p>
+      
+    </div>
+</div>
+{% endif%}
+{% endfor %}
+
+<!-- Harlems Dreams MEME --- Beginning -->
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="vid-modal">
+      <span id="vexit"><i class="fa fa-window-close ex" aria-hidden="true"></i></span>
+      <div class="vid-box">
+        <h1 id="modal-font">Harlem Dreams Basketball</h1>
+        <iframe id="front-video"
+          src="https://www.youtube-nocookie.com/embed/Hua4MRTKmy0?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+      <!-- additional info for app advertisement. -->
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- Harlems Dreams MEME --- End -->
+
+<div class="container-fluid header-box">
+  <div class="row">
+    <div class="col-lg-12" id="woodgrain-backdrop" style="margin-top: -1px;">
+      <img id="dreams_logo" class="center" src="{% static 'dream_app/images/logo2.png' %}" alt="Harlem Dream Logo">
+    </div>
+  </div>
+
+  <div class="sound-video">
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 top-specs">
+      <div class="container">
+        <div class="row" style="padding: 10px">
+          <div class="col-sm-6">
+            <div class="pad" id="pushup">
+              <img class=" img-responsive" id="dare-pic" src="{% static 'dream_app/images/dare2dream_c.png' %}" alt="">
+              <p id="dare-p">
+                Non-profit organization sponsored by the Harlem Dreams
+              </p>
+              <button href="https://www.facebook.com/leftywilliams42/" id="specs-button" class="button center">Learn
+                More</button>
+            </div>
+          </div>
+          <div class="col-sm-6" id="app">
+            <div class="pad">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 id="spec-heading">Harlem Dreams Mobile</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <img class="center img-responsive" id="app-pic" src="{% static 'dream_app/images/app-pic.png' %}"
+                    alt="">
+                </div>
+              </div>
+              <p></p>
+              <p style="text-align: center; font-size: 20pt; color: whitesmoke">Download Our Free App</p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <img class="google-app" src="{% static 'dream_app/images/apple_store.svg' %}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+
+      <div class="col-sm-4">
+
+      </div>
+    </div>
+    <div class="row" style="margin-top: unset;">
+      <div class="col-sm-4 ">
+        <div class="basket d-none d-sm-block">
+
+        </div>
+        <img id="springz" class="center-block d-none d-sm-block" src="{% static 'dream_app/images/springz3.png' %}"
+          alt="">
+      </div>
+
+      <div class="col-sm-4" id="left-fanbox">
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="{% static 'dream_app/images/cj-harvey.jpg' %}" width="100%" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="collg-6 d-none d-sm-block">
+            <img class="center5" src="{% static 'dream_app/images/left-fanboy.png' %}" alt="">
+          </div>
+          <div class="cj-txt col-sm-6 ">
+            <P style="text-align:center; margin-bottom:100px;">
+              Brand Ambassador CJ on NBC Hit Show Little Big Shots With Steve Harvey</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 cj-btn-box ;">
+            <a id="cj-btn" class="" target="_blank" href="https://www.youtube.com/watch?v=bdZo8Q341ek&feature=youtu.be">
+              <i style="font-family:'Bebas Neue', sans-serif; color: red; margin-right: 20px;" class="fab fa-youtube"
+                aria-hidden="true">&nbsp;</i>Click
+              Here!</a>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="col-sm-4" style="padding:0px 20px 0px 5px;">
+        <!-- <div class="row"> -->
+        <div id="lefty-profile" style="padding: 0px 20px 0px 20px">
+
+          <img id="lefty" class="center-block" src="{% static 'dream_app/images/lefty.png' %}" alt="">
+          <h1 style=" text-align: center; font-family: 'Bebas Neue', sans-serif; color:white;">#42 Lefty Williams</h1>
+          <br>
+          <p id="showman"> Showman</p>
+          <!-- <p style="font-weight: bold; color: white; text-align: center; font-family: 'Krona One', sans-serif; font-size:13pt">Position: Showman</p>
+        <br>
+        </p> -->
+          <div class="sexy-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if photos|length != 0 %}
+  <div class="container event-sec">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul id="sb-slider" class="sb-slider" style="max-height: 500px; max-width: 700px; overflow: hidden;">
+          {% for photo in photos %}
+          <li>
+            <img src="{{ photo.image.url }}" alt="image1" />
+            <div class="sb-description">
+              <h3> {{ photo.description }} </h3>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+
+  <div class="container center3  lg-tp">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8" style="padding: 0px 30px">
+        <a href="/team"><img id="team-pic" class="img-fluid" src="{% static 'dream_app/images/team_shot.png' %}"
+            alt="Dream Team Shot"></a>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+
+  {% endif %}
+
+  <script type="text/javascript">
+    $(function () {
+      var Page = (function () {
+        var $navArrows = $('#nav-arrows').hide(),
+          $navDots = $('#nav-dots').hide(),
+          $nav = $navDots.children('span'),
+          $shadow = $('#shadow').hide(),
+          slicebox = $('#sb-slider').slicebox({
+            onReady: function () {
+              $navArrows.show();
+              $navDots.show();
+              $shadow.show();
+            },
+            onBeforeChange: function (pos) {
+              $nav.removeClass('nav-dot-current');
+              $nav.eq(pos).addClass('nav-dot-current');
+            }
+          }),
+          init = function () {
+            initEvents();
+          },
+          initEvents = function () {
+            // add navigation events
+            $navArrows.children(':first').on('click', function () {
+              slicebox.next();
+              return false;
+            });
+            $navArrows.children(':last').on('click', function () {
+              slicebox.previous();
+              return false;
+            });
+            $nav.each(function (i) {
+              $(this).on('click', function (event) {
+                var $dot = $(this);
+                if (!slicebox.isActive()) {
+                  $nav.removeClass('nav-dot-current');
+                  $dot.addClass('nav-dot-current');
+                }
+                slicebox.jump(i + 1);
+                return false;
+              });
+            });
+          };
+        return { init: init };
+      })();
+      Page.init();
+    });
+  </script>
+  <script type="text/javascript">
+    var exitBtn = document.getElementById("vexit");
+    var flow = document.querySelector("body");
+    var modal = document.querySelector(".vid-modal");
+
+    $(window).on('beforeunload', function () {
+      $('body').hide();
+      $(window).scrollTop(0);
+    });
+
+
+    exitBtn.onclick = function () {
+
+      modal.style.display = "none";
+      flow.style.overflowY = "scroll";
+      console.log("working")
+
+      var exitBtn2 = document.getElementById("notice-exit");
+      var notice = document.querySelector(".hide-notice");
+
+
+
+
+      exitBtn2.onclick = function () {
+
+        notice.style.display = "none";
+
+        console.log("working2")
+
+      }
+
+    }
+
+  </script>
+
+  {% endblock %}

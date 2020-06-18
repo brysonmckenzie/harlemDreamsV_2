@@ -1,0 +1,151 @@
+{% extends 'base_template/base.html' %} {% block body %} {% load static %}
+
+<style>
+    body {
+    background-image: url('/static/dream_app/images/white_hoop.jpg');
+    background-position: top;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+
+</style>
+
+
+
+<div class="container" style="margin-top: 75px">
+    <div class="row">
+        <div class="col-lg-12 player-white">
+            <div class="row">
+                <div class="col-lg-12 roster">
+                    <h1 style="font-family: 'Luckiest Guy', cursive;">The <span style="color: rgb(12, 12, 112)" class="dreams-font">Harlem Dreams</span> Roster</h1>
+                </div>
+            </div>
+            <div class="row boot">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/lefty-pic.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#42 Lefty Williams</h2>
+                    <!-- <p>Position: Showman</p> -->
+                    <p class="bio">This 15 year veteran comes to you from Jersey City, New Jersey. He was the first left handed showmen
+                        in Globetrotter history. He's a 2x defensive player of the year from New Jersey City University.
+                        He's been featured in the ESPN magazine, NBC Little Big Shots with Host Steve Harvey, and has also
+                        been featured in a National commercial with NBA 2x MVP Stephen Curry. He's been to 30 different countries,
+                        all 50 states and 8 provinces of Canada. When Lefty's not making people laugh on the court, you can
+                        find him with his wife working with their charity, the Harold Lefty Williams DARE2DREAM Foundation,
+                        Inc the foundation helps youth with sports and character development.</p>
+                    <p class="quote">Success for me was failure turned inside out. yes I was scared, yes I had to take risk, but God was with
+                        me every step of the way. Im so thankful I didn't allow FEAR to give me a life sentence called doubt.
+                        DARE2DREAM </p>
+                    <!-- <img src="{% static 'dream_app/images/lefty-player.jpg' %}" height="500px" width="100%" alt=""> -->
+
+                    <div class="sexy-line"></div>
+                </div>
+
+
+            </div>
+            <div class="row boot">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/springz8.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#20 Springz</h2>
+                    <!-- <p class="bio">Position: Foward</p> -->
+                    <p>This do it all 5th year veteran is a native of Jersey City, New Jersey. He is as athletic as they come, whether
+                        dialing from long distance, playing great defense, or jumping over his defender, he does it all with
+                        a smile! He can heat up in a hurry. When not playing basketball he enjoys singing and writing music.</p><br>
+                    <p class="quote">If you're not loving you're not living</p>
+                    <div class="sexy-line"></div>
+
+                </div>
+                <!-- <div class="sexy-line"></div> -->
+            </div>
+            <div class="row boot">  
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/RoadRunner.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#4 RoadRunner</h2>
+                    <!-- <p>Position: Foward</p> -->
+                    <p class="bio">This Performer is from the Garden State of New Jersey. He's known for blowing by players in a flash. When he's
+                        not scoring buckets, you can catch him locking down the competition or hanging out at the 3 point
+                        line. </p><br><br><br>
+                    <p class="quote">Stay True, Be Fit</p>
+                    <div class="sexy-line"></div>
+
+
+                </div>
+                <!-- <div class="sexy-line"></div> -->
+            </div>
+
+            <div class="row boot">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/Pope.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#2 Pope</h2>
+                    <p class="bio">This 6th year performer is from the state of Mississippi. He is known for his electrifying slam dunks
+                        as well as his smooth moves on the court. He also has an incredible 42' vertical leap. Pope has a
+                        goal to make 1 million people smile and trust us, he is well on his way.</p><br>
+                    <p class="quote">People Change and things do go wrong, just remember, life goes on.</p>
+
+                    <div class="sexy-line"></div>
+
+                </div>
+            </div>
+            <div class="row boot">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/Lynks.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#15 Lynks</h2>
+                    <p class="bio">Lynks' is a amazing, little, 7 foot 6? Lol, from Dakar Senegal and is known for demanding a triple team all
+                        over the world. He's also a talented shot blocker.He’s played in the NBA G League with the Santa
+                        Cruz Warriors , a Golden State Warriors affiliate as well as the Grand Rapids Drive, a affiliate
+                        of the Detroit Pistons.</p>
+                    <p class="quote">Dont give up. One day you will look back and be glad you didn't.</p>
+                    <div class="sexy-line"></div>
+
+                </div>
+                <!-- <div class="sexy-line"></div> -->
+            </div>
+            <div class="row boot">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/lilBizy.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">#1 Lil Bizy</h2>
+                    <p class="bio">This performer comes to you from Dunn, North Carolina and has yet to find one opponent who can guard him one on one. He is known for breaking people ankles all over the world while doing it all with a smile. When not playing basketball he's known for his volunteer work with the youth.</p>
+                    <p class="quote">Except who you are and love who you are.</p>
+                    <div class="sexy-line"></div>
+
+                </div>
+                <!-- <div class="sexy-line"></div> -->
+            </div>
+            <div class="row ">
+                <div class="col-lg-4">
+                    <img class="player-img" src="{% static 'dream_app/images/ref.png' %}" width="300px" height="300px" alt="">
+                </div>
+                <div class="col-lg-8 player-profile">
+                    <h2 style="color: white; border-bottom: 1px solid white; margin-bottom: 20px;">Tommy the Ref</h2>
+                    <p class="bio">This official is from Columbus, Ohio. He’s been in Movies, tv shows and commercials and is a U.S Navy
+                        Veteran. He's served in Desert shield, Desert Storm in Kuwait in 1991-1992. He has traveled to over
+                        12 different countries an has his work cut out for himself keeping the Dreams in line.</p>
+                    <p class="quote">The past can not be change. You can control the present with hope for the future.</p>
+                    <!-- <div class="sexy-line"></div> -->
+                </div>
+                <div class="sexy-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="{% static 'dream_app/images/logo2.png' %}" style="z-index: -1 ; display: block; margin-left: auto;margin-right: auto; margin-top: 25px"
+                        width="40px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+<style>
+    body {
+        background-image: url('/static/dream_app/images/white_hoop.jpg');
+        background-position: top;
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        background-attachment: fixed;
+        /* overflow-x: hidden;
+        overflow-y: hidden; */
+    }
+        /* #myFooter {
+        position: sticky;
+        bottom: 0px;
+    } */
+</style>
+
+
+
+<div class="container" style="margin-top: 25px">
+    <div class="row">
+        <div class=" col-lg-12 player-white">
+            <div class="row">
+                <div class="col-lg-12 roster">
+                    <h1 style="font-family: 'Bebas Neue', sans-serif;
+                    font-size: 48pt;
+                    margin-bottom: 50pt;" class="dreams-font">Meet The Team</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if player.active.all == False %}
+    <div class="empty">
+        <img class="empty-img center" src="{% static 'dream_app/images/logo2.png' %}" alt="">
+    </div>
+    {% endif %}
+    {% for player in players %}
+    {% if active == True %}
+    <div class="row boot">
+        <div class="col-lg-4">
+            <img class="player-img" src="{{ player.image.url }}" width="300px" height="300px" alt="">
+        </div>
+        <div class="col-lg-8 player-profile">
+
+            <h2 style="border-bottom: 1px solid white; margin-bottom: 20px;">
+                {% if player.number_sign != False %}<span>#</span>{% endif %}
+                {% if player.show_number == True%}{{ player.number }}{% endif %}
+                {{ player.name }}
+            </h2>
+            <p><i class="positon">Position: {{ player.position }}</p>
+            <p class="bio">{{ player.bio  }}</p>
+            <p class="quote">{{ player.quote }}</p>
+            <div class="sexy-line"></div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

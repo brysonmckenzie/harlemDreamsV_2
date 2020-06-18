@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+<style>
+body {
+    background-image: url(/static/dream_app/images/white_hoop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#myFooter {
+    padding-top: 9px;
+}
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0));">The Harlem Dreams Store</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 shop">
+            <div class="row">
+                <div class="col-md-12">
+                    <p id="cs" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px;">Coming Soon!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-sm-12" style="background-color:rgba(225,225,225,0.3);">
+            <img src="{% static 'dream_app/images/logo2.png' %}" style="padding:25px 0px 25px 0px; z-index: -1 ; display: block; margin-left: auto;margin-right: auto; margin-top: 10px"
+                width="40px" alt="">
+        </div>
+    </div> -->
+</div>
+{% endblock%}

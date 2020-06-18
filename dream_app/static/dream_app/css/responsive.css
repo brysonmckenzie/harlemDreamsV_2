@@ -1,0 +1,522 @@
+@media screen and (max-width:996px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media screen and (min-width:996px) {
+    .nav-link {
+        /* margin-left: 40px; */
+    }
+}
+
+>.k {
+    margin: 0px 0px 10px;
+}
+
+@media screen and (min-width:561px) and (max-width:996px) {
+    .hide {
+        display: none;
+    }
+    #cs {
+        font-family: 'Krona One', sans-serif;
+        font-size: 30pt;
+        color: rgb(239, 237, 237);
+        text-align: center;
+        background: rgba(3, 28, 37, 0.8);
+        padding: 140px;
+    }
+    #dreams_logo {
+        width: 15rem;
+        height: 15rem;
+    }
+    .footer-sz {
+        font-size: 4pt;
+    }
+    .blue {
+        font-size: 9px;
+    }
+    #cj {
+        position: absolute;
+        bottom: 470px;
+        right: 5px;
+        color: #2974b2;
+        font-size: 50px
+    }
+    #cj-btn {
+        /* background-color: black; */
+        padding: 15px 10px 15px 0px;
+        border-radius: 5px;
+        /* font-size: 10pt; */
+        /* margin-bottom: 50px; */
+        /* text-align: center; */
+        /* font-family: 'Krona One', sans-serif; */
+    }
+    #left-fanbox {
+        margin-top: 0px;
+        height: 100%;
+        padding-top: 15px;
+        /* padding-bottom: 30px; */
+        /* z-index: 1; */
+        /* font-family: 'Luckiest Guy', cursive; */
+        /* background: white;
+        z-index: 1003; */
+    }
+    /* .cj-txt p {
+        /* touched 032920 // for better mobile resonsiveness bbm001 */
+    /* margin-top: 20px !important; */
+    font-size: 8pt;
+    /* margin: 0 auto; */
+    /* padding: 50px; */
+    display: block;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    position: unset;
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
+    margin-bottom: 5px !important;
+}
+
+*/ .cj-btn-box {
+    padding: 0px 0px 5px 0px;
+}
+
+/* .vid-modal {
+        
+        display: none;
+    } */
+
+.team-play {
+    /* margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0; */
+    /* height: 8rem; */
+}
+
+}
+
+@media screen and (max-width:560px) {
+    .min-center {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    #footer-logo {
+        width: 2rem;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .video-header {
+        text-align: center;
+        font-size: 18pt;
+    }
+    .hide-2 {
+        display: none;
+    }
+    .vid {
+        margin: 70px 5px 0px 5px;
+    }
+    .harlem-media {
+        /* background-image: url('/static/dream_app/images/OLO2ED0.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; */
+        margin-top: 30px;
+    }
+    #dreams_logo {
+        width: 15rem;
+        height: 15rem;
+    }
+    #pre-header {
+        background-color: white
+    }
+    /* .base{
+        background:url('/static/dream_app/images/hoop_dreams.png');
+        background-repeat: no-repeat;
+        background-size:cover
+    } */
+    .nav-navbar-na {
+        z-index: 1000;
+    }
+    .hide {
+        position: static;
+    }
+    #collapseNavbar {
+        position: absolute;
+        z-index: 1;
+    }
+    nav {
+        padding-bottom: 100px;
+        z-index: 1000;
+    }
+    .nav-item {
+        width: 100%
+    }
+    #footer-logo {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #left-fan {
+        position: absolute;
+        top: 206px;
+        left: 36px;
+    }
+    #left-fanbox {
+        border-radius: unset;
+    }
+    .about {
+        text-align: center;
+    }
+    .footer-sz {
+        font-size: 10px;
+        text-align: center;
+    }
+    .blue {
+        background-color: #2974B2;
+    }
+    .team-box {
+        width: 200px;
+        height: 70px;
+    }
+    #cj {
+        position: absolute;
+        bottom: 470px;
+        right: 50px;
+        color: #2974b2;
+        font-size: 50px
+    }
+    .eventab {
+        font-size: 15pt;
+    }
+    #left-fanbox {
+        margin: 0;
+    }
+    .vid-modal {
+        margin: 0 auto;
+        width: 95%;
+        border: unset;
+    }
+    .founder-pic {
+        /* background: white; */
+        /* padding: 50px; */
+        /* width: 50%; */
+        /* display: block; */
+        /* margin: auto; */
+        /* margin-right: 1rem; */
+        /* float: left; */
+    }
+    /* body {
+        overflow-x: hidden !important;
+    } */
+    .founder-pic {
+        /* background: white; */
+        /* padding: 50px; */
+        /* width: 50%; */
+        /* display: inline-block; */
+        /* margin: auto; */
+        /* margin-right: 1rem; */
+        /* float: none; */
+    }
+    #front-video {
+        /* width: 450px; */
+        width: 20rem;
+        height: unset;
+        border: unset;
+    }
+    #vexit {
+        right: 5rem;
+    }
+    #founder-title {
+        font-size: 20pt;
+    }
+    .about-contain {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1160px) {
+    .sb-description {
+        display: none;
+    }
+    #springz {
+        /* display: none; */
+    }
+    #hoop {
+        display: none;
+    }
+    #lefty {
+        width: 80%;
+        /* margin-bottom: 200px; */
+        position: unset;
+    }
+    #news {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1570px) and (min-width: 1200px) {
+    .cj-txt p {
+        width: 100%;
+        margin-top: 0px;
+        font-size: 17pt;
+        /* position: relative; */
+        /* right: 0px; */
+        padding-bottom: 0;
+        margin-top: 20px;
+    }
+    .founder-bold {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 561px) {
+    .cj-txt p {
+        width: 100%;
+        margin-top: 0px;
+        font-size: 17pt;
+        /* position: relative; */
+        right: 0px;
+        padding-bottom: 20px;
+        /* padding-right: 100px; */
+        margin-top: 20px;
+    }
+    #cj-btn {
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        overflow-x: hidden;
+    }
+    #front-video {
+        width: 100%;
+        /* height: 25rem; */
+    }
+    .footer-sz {
+        text-align: center;
+        color: white;
+        display: inline;
+    }
+    #left-fanbox {
+        margin-top: 0;
+    }
+    .min-center {
+        text-align: center;
+    }
+    #specs-button {
+        font-size: 12pt;
+    }
+    .pad {
+        min-height: unset;
+    }
+    .cj-txt p {
+        width: 100%;
+        margin-top: 0px;
+        font-size: 17pt;
+        /* position: relative; */
+        right: 0px;
+        /* padding-bottom: 20px; */
+        /* padding-right: 100px; */
+        /* margin-top: 20px; */
+    }
+    .top-specs {
+        background: unset;
+        border-bottom: unset;
+        margin-bottom: 15px;
+    }
+    .eventab {
+        padding: 0px 30px;
+    }
+    #modal-font {
+        font-size: 1.6rem;
+    }
+    .founder-font {
+        font-size: 18pt;
+    }
+    .team-play {
+        height: -webkit-fill-available;
+        font-size: 1.5rem;
+        color: white;
+    }
+    .event-box {
+        padding-top: 20px
+    }
+    .cj-btn-box {
+        padding: 0px 0px 5px 0px;
+    }
+    .mazu {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .pic-size {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+    #dare-p {
+        text-align: center;
+    }
+    #no-event {
+        font-size: 12pt;
+        padding: 30px 0px 30px 0px !important;
+        text-align: center;
+    }
+    .vid {
+        margin-bottom: 50px;
+    }
+    .sponsor-border {
+        border: unset;
+    }
+    .contact-bar {
+        padding: 0px 30px 0px 30px;
+        margin-top: unset;
+        text-align: center;
+        ;
+    }
+    .contact-message {
+        margin-bottom: 40px;
+    }
+    #contact {
+        padding: 25px 10px 0px 10px;
+        margin: 0px 15px 30px 15px;
+    }
+    .hd-media-content {
+        border: 0;
+    }
+    #woodgrain-backdrop {
+        /* background-image: unset; */
+    }
+    #dreams_logo {
+        width: 15rem;
+        height: 15rem;
+    }
+    #cj-btn {
+        border-radius: 5px;
+        font-size: 22pt;
+        margin-bottom: 25px;
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif;
+        /* display: block; */
+        letter-spacing: 10px;
+    }
+    .player-profile {
+        border-left: 0px solid white;
+    }
+    .player-profile h2 {
+        background: linear-gradient(180deg, rgba(3, 27, 38, 1), transparent);
+        color: white;
+    }
+    .player-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ray-quote {
+        font-size: 1.5em !important;
+        padding: 0;
+    }
+    #cs {
+        padding: 100px;
+    }
+    /* #front-video {
+        width: 16rem;
+        height: 14rem;
+    } */
+}
+
+@media screen and (max-width: 1173px) and (min-width: 576px) {
+    .contact-bar {
+        padding: 0px 0px 0px 0px;
+        margin-left: 50px;
+        margin-top: unset;
+        /* border: 0; */
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #contact {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1230px) and (min-width: 576px) {
+    #springz {
+        width: 20rem !important;
+    }
+}
+
+@media screen and (max-width: 1175px) {
+    .contact-bar {
+        border: unset;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .player-profile {
+        border: 0;
+    }
+    .player-profile h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+    .player-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 992px) {
+    /* #front-video {
+        width: 36rem;
+        height: 25rem;
+    }
+    .vid-modal {
+        width: 615px;
+    } */
+}
+
+/* ipad screen */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #vexit {
+        z-index: 1005;
+        position: fixed;
+        top: 0.15rem;
+        right: 7.2rem;
+        color: white;
+        font-size: 38px;
+        cursor: pointer;
+    }
+    .team-play {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-link {
+        border: 1px solid white;
+        margin-bottom: 20px;
+        letter-spacing: 10px;
+        /* margin-left: 70px; */
+    }
+    .nav-links:hover {
+        background: rgba(8, 27, 38)
+    }
+    #logo-push {
+        margin-right: 0px;
+    }
+}

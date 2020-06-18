@@ -1,0 +1,100 @@
+{% extends 'dream_app/base.html' %} {% block body %} {% load staticfiles %}
+<div class="container-fluid" style="padding:50px;">
+    <div class="row">
+        <div class="col-sm-12" style="margin-bottom: 50px">
+            <h1 style="text-align: center; font-family: 'Luckiest Guy', cursive; color:#214F74;">Careers</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row" style="padding:0px 10px 0px 10px;">
+        <div class="col-sm-12j career-logo">
+                <img src="{% static 'dream_app/images/logo2.png'%}"  width="200px" alt="">
+        </div>
+    </div>
+    <div class="row" style="padding:0px 10px 0px 10px;">
+        <div class="col-sm-4">
+            <img src="{% static 'dream_app/images/logo2.png'%}"  width="300px" alt="">
+        </div>
+        <div class="col-sm-4">
+                <img src="{% static 'dream_app/images/logo2.png'%}"  width="300px" alt="">
+
+        </div>
+        <div class="col-sm-4">
+                <img src="{% static 'dream_app/images/logo2.png'%}"  width="300px" alt="">
+
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-sm-6" id="contact">
+        <div class="form-group">
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <label for="name">Name</label>
+                <br>
+                <input class="form-control" type="text" name="client_name">
+                <br>
+                <label for="subject">Position</label>
+                <br>
+                <input class="form-control" type="text" name="client_position">
+                <br>
+                <label for="address">Address</label>
+                <br>
+                <input class="form-control" type="text" name="client_address">
+                <br>
+                <label for="address">Address 2</label>
+                <br>
+                <input class="form-control" type="text" name="client_address2">
+                <br>
+                <label for="address">City</label>
+                <br>
+                <input class="form-control" type="text" name="client_city">
+                <br>
+                <label for="address">State</label>
+                <br>
+                <input class="form-control" type="text" name="client_state">
+                <br>
+                <label for="address">Zip</label>
+                <br>
+                <input class="form-control" type="text" name="client_zip">
+                <br>
+                <label for="address">Age</label>
+                <br>
+                <input class="form-control" type="text" name="client_age">
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input class="form-control" type="text" name="client_email">
+                <br>
+                <label for="email">Phone</label>
+                <br>
+                <input class="form-control" type="text" name="client_phone">
+                <br>
+                <label for="message">Tell me about yourself?</label>
+                <br>
+                <textarea name="client_q1" class="form-control" id="" cols="10" rows="10">
+                        </textarea>
+                <br>
+                <label for="message">Why you want to become a member of the harlem dreams basketball player and basketball association?</label>
+                <br>
+                <textarea name="client_q2" class="form-control" id="" cols="10" rows="10">
+                        </textarea>
+                <br>
+                <label for="message">What are your talents regarding show ball?</label>
+                <br>
+                <textarea name="client_q3" s class="form-control" id="" cols="10" rows="10">
+                        </textarea>
+                <br>
+
+                <button>Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-6"></div>
+</div>
+
+</div> -->
+
+{% endblock %}

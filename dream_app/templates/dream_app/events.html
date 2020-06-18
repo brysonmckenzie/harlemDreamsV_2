@@ -1,0 +1,165 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+<style>
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: url(/static/dream_app/images/full_court.jpg);
+        background-size: cover
+    }
+
+    @media screen and (min-width: 560px) and (max-width: 577px) {
+        #footer-logo {
+            display: none;
+        }
+    }
+</style>
+
+<style type="text/css">
+    body {
+        height: 100%;
+        width: 100%;
+        /* overflow: hidden; */
+    }
+
+    #no-event {
+        height: 700px;
+        padding: 50px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 32pt;
+        background-color: rgba(255, 255, 255, 0.3);
+        position: relative;
+        display: block;
+        text-align: center;
+
+    }
+
+    #no-event::after {
+        content: '';
+        background-image: url(/static/dream_app/images/logo2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+</style>
+<div class="container">
+
+    <div class="row ">
+
+        <div class="col-sm-12 text-center"
+            style="color:#214F74; font-family: 'Bebas Neue', sans-serif; margin-top: 30px; margin-bottom: 30px;"><span
+                style="font-size:40pt; color: white; letter-spacing: 10px;" class="">The Harlem Dreams</span>
+            <h1 style="font-size: 42pt; letter-spacing: 10px; background: linear-gradient(45deg, transparent, rgba(245, 245, 245, 0.7), transparent);">Coming to a city Near you
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1
+                style="text-align: center; font-size: 2rem; color: white; text-transform: uppercase; padding-bottom: 15px;">
+                Upcoming Games</h1>
+        </div>
+    </div>
+    {% if events|length != 0 %}
+    {% for e in events %}
+    <div class="container">
+
+        <div class="event-box">
+            <div class="row eventab" style="height:400px; ">
+                <div class="col-sm-5 ">
+                    <!-- <img class="img-fluid vs-img team-play" src="{{ e.hd_event_logo.url }}" alt=""> -->
+                    <img class="img-fluid vs-img team-play" src="{{ e.hd_event_logo.url }} " alt="">
+                </div>
+                <div class="col-sm-2 mx-auto">
+                    <h2 class="text-center align-middle team-play-vs">VS</h2>
+                </div>
+                <div class="col-sm-5">
+                    <img class="img-fluid vs-img team-play" src="{{ e.image.url }}" alt="">
+
+                </div>
+
+            </div>
+            <div class="row">
+                <h3 class="text-center event-sub" style="color: white;">Harlem
+                    Dreams VS
+                    {{e.opponent}}
+                </h3>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 eventdesc">
+                    <p>{{e.description}}</p>
+                </div>
+            </div>
+
+
+
+
+            <table class="table t-font"
+                style="font-family: 'Bebas Neue', sans-serif;  color: white; text-align: center;">
+
+                <div class="cal-content">
+                    <div class="calender-box">
+                        <div class="month">
+                            <h6>{{e.date | date:"M" }}</h6>
+                        </div>
+
+                        <h1 class="date text-center" style="font-size: 2rem;"> {{e.date | date:"d"}}
+                        </h1>
+                       
+                    </div>
+                    <div class="year">
+                        <h3>{{e.date | date:"Y"}}</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div style="margin-top: 60px;" class="col-sm-4">
+                        <tbody>
+                            <tr>
+                                <td>Location:</td>
+                                <td>{{e.location}}</td>
+                            </tr>
+                            <tr>
+                                <td>Time:</td>
+                                <td>{{e.time}}</td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td>{{e.address}}<br>
+                                    {{e.city}}, {{e.state}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </div>
+
+
+
+                    <div class="col-sm-4"></div>
+                </div>
+            </table>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %}{% else %}
+<div class="container-fluid"  id="no-event">
+    {{no_event}}</div>
+{% endif %}
+</div>
+
+
+{% endblock %}
+

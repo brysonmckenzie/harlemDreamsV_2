@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+<style>
+body {
+    background-image: url(/static/dream_app/images/white_hoop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+</style>
+
+<div class="container overlay ">
+    <div class="row ">
+        <div class="col-sm-12 sponsor-shop ">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="text-align: center; font-family: 'Bebas Neue', sans-serif; letter-spacing: 10px;">Sponsors</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 sponsor-border">
+                    <a href="https://mazufamily.com/">
+                        <img src="{% static 'dream_app/images/mazu.png' %}" width="100%" alt="">
+                    </a>
+                    <p>Mazu is a trusted leader in building child safe digital spaces. We power positive connections between
+                        young fans and their favourite brands by building a custom family friendly apps based on the Mazu
+                        platform. We incorporate games, trivia, exclusive content feeds, filtered chatrooms and more.</p>
+                </div>
+                <div class="col-sm-6 sponsor-border">
+                    <a href="https://txt2give.co/">
+                        <img src="{% static 'dream_app/images/txt2give.png' %}" width="100%" alt="">
+                    </a>
+                    <p>Make giving easy and raise more money, with Txt2Give.
+                        <br><br>
+
+                            Txt2Give built both our text and online giving options to help churches, nonprofits, schools and universities receive donations faster than ever before.</p>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+ 
+</div>
+{% endblock%}

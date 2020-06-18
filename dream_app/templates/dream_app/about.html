@@ -1,0 +1,227 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+<style>
+    .sexy-line {
+        /* margin: 25px 0; */
+        height: 2px;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(225, 225, 225, 0.1)), to(rgba(225, 225, 225, 0.1)), color-stop(50%, white));
+        width: 100%;
+        display: block;
+        margin-top: 30px
+            /* float: right; */
+    }
+
+    /* footer {
+        position: sticky;
+        bottom: 0px;
+    } */
+
+    p {
+        text-align: center;
+    }
+
+    body {
+        background-image: url(/static/dream_app/images/white_hoop.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bebas {
+        font-family: 'Bebas Neue', sans-serif;
+        
+    }
+
+
+    @media screen and (max-width:560px) {
+        .left-col {
+            text-align: center;
+        }
+    }
+</style>
+
+<div class="container" style="font-family: Open sans;">
+    <!-- <div class="row">
+        <div style="padding: 30px;" class="col-sm-12">
+            <h1 style="text-align: center; color:#2974B2;font-family:'Luckiest Guy', cursive; ">About the <span
+                    style="color: rgb(12, 12, 112)" class="dreams-font">Harlem Dreams</span></h1>
+            <hr>
+        </div>
+    </div> -->
+    <!-- <div class="row">
+        <div class="col-md-12">
+            <img id="topball" src="{% static 'dream_app/images/dream-ball.png' %}" alt="">
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-sm-12 about-intro">
+            <h1 class="bebas">The Harlem Dreams are led by Entrepreneur Ray K. Morris and Funnyman, showman Harold “Lefty”
+                Williams. We are an exhibition
+                show basketball team that tours all over the world. Every show includes incredible athleticism,
+                entertainment
+                and comedy.
+            </h1>
+        </div>
+    </div>
+    <div class="row" style="padding: 0 10px">
+
+        <div  class="col-sm-12 about-contain" style="color: white; padding:50px">
+            
+            <div class="row ">
+                <!-- <img  style="filter:opacity()" width="100%"" height="500px" src=" {% static 'dream_app/images/team_shot.png' %}" alt=""> -->
+                <div class="col-sm-12 left-col" style="font-size: 20pt; padding: 0px 50px 0px 50px">
+
+                    <h4 class="mid">Harlem Dreams Mission</h4>
+                    <p>Promote professional achievement, entertainment, comedy, strong leadership capability,
+                        self-discipline,
+                        teamwork and excellence in athletic performance.</p>
+                    <p>Provide the entire audiences with a source of community pride.</p>
+                    <p>Generate positive visibility in the public media and use this visibility to communicate the
+                        Harlem
+                        Dreams’ vision, mission and values.</p>
+
+
+                </div>
+                <div class="row" ">
+                    <div class="col-sm-12 goals center-block text-center">
+                        <p>Goal I: To comply with both the spirit and the law of all lands guidelines.</p>
+                        <p>Goal II: To enhance values in the total development of our professional staff through
+                            athletic
+                            achievement,engagement in the life of the communities and leadership development.</p>
+                        <p> Goal III: To set high standards for professionals.</p>
+                        <p>Goal IV: To enhance the visibility of the Harlem Dream through our professional character.
+                        </p>
+                        <p>Goal V: To serve as a bonding force in cities and countries.</p>
+                        <p>Goal VI: To implement a plan to achieve our goal of global success.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second section -->
+
+            <div class="row">
+                <div class="col-sm-12 left-col" style="padding: 0px 50px 0px 50px">
+
+
+                    <h4 class="mid">Unquestionable Integrity</h4>
+                    <p> As a professional show basketball organization, our primary goals are the positive mentality
+                        and professional development of our basketball organization. These commitments will be
+                        consistently
+                        measured by our exceptional administration of our players and rules compliance by our staff.</p>
+
+                    
+                    <br>
+                </div>
+
+                <div class="col-sm-12 left-col" style="padding: 0px 50px 0px 50px">
+
+
+                    <h4 class="mid">Service Minded</h4>
+                    <p>As a professional exhibition basketball organization, we support and foster the development of
+                        people devoted to the pursuit of a common good that transcends the interests of particular
+                        individuals
+                        or groups.
+                    </p>
+
+                    
+                    <br>
+                </div>
+                <div class="col-sm-12 left-col" style="padding: 0px 50px 0px 50px">
+
+
+                    <h4 class="mid">Focused on Dreaming</h4>
+                    <p> As an exhibition basketball organization and a major source of pride, people and dreamers;
+                        dreaming
+                        is the key component. Everyone that is part of our family, our team will strive to win.</p>
+
+                    <div class="col-sm-12">
+                        <p>Goal I: To set high standards on winning spirits.</p>
+                        <p>Goal II: To enhance the visibility of show basketball through sports, entertainment and
+                            comedy.</p>
+                        <p>Goal III: To develop and implement a plan to provide the necessary support to achieve the
+                            established goals.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-12 left-col" >
+
+<br>
+                    <h4 class="mid">Determined to be Involved</h4>
+                    <p>The Harlem Dreams will play an integral part throughout greater parts of the United States, and
+                        Canadian communities and abroad. Athletic opportunities are vehicles to heighten personal
+                        development.
+                        When complemented with intense community involvement, we believe that the benefits of the Harlem
+                        Dreams participation will be available to as many residents and friends as possible.</p>
+                    <div class="col-sm-12 parah">
+                        <p>Goal I: To increase the number of supporters and spectators actively engaged in our
+                            organization.
+                        </p>
+                        <p>Goal II: To support and promote opportunities for diverse entertainment operations and staff
+                            within the cities and countries.
+
+                        </p>
+                        <p>Goal III: To support and promote family entertainment for youth and their parents leading
+                            to opportunities in professional sports and life.</p>
+
+                        <div class="sexy-line"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="d-none d-sm-block" src="{% static 'dream_app/images/logo2.png' %}"
+                        style="z-index: -1 ; display: block; margin-left: auto; margin-right: auto; margin-top: 60px"
+                        width="60px" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <div id="harlem-group3" class="col-sm-5 side-about d-none d-md-block ps-top-to-bottom" style="">
+            <img class="center-block " id="harlem-group2" src="{% static 'dream_app/images/harlem-group1.jpg' %}" alt="">
+        </div> -->
+    </div>
+</div>
+{% endblock%}
+
+
+
+
+
+
+<!-- <div class="row ">
+        <div class="about-content">
+            <div class="col-sm-12 about">
+                <h1>ABOUT THE DREAM'S</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 ">
+
+                <img class="center-block" id="harlem-group2" style="text-align: center; width:70%;" src="{% static 'dream_app/images/harlem-group1.jpg' %}"
+                    alt="">
+                <P class="about-txt"> "Harlem Dreams" are an exhibition show basketball team that tours all over the world. Every show includes
+                    incredible athleticism, entertainment & comedy.
+                </P>
+            </div>
+        </div>
+    </div> -->

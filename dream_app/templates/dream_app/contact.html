@@ -1,0 +1,140 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+<style>
+    .sexy-line {
+        /* margin: 25px 0; */
+        height: 2px;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(225, 225, 225, 0.1)), to(rgba(225, 225, 225, 0.1)), color-stop(50%, white));
+        width: 100%;
+        display: block;
+        margin-top: 70px
+            /* float: right; */
+    }
+
+    body {
+        background-image: url(/static/dream_app/images/white_hoop.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden;
+
+    }
+
+    @media screen and (max-width: 576px){
+
+        
+    footer {
+        bottom: 0;
+    }
+
+}
+</style>
+
+<script>
+
+    function validateForm() {
+        var x = document.forms["contact-frm"]["client_name"].value;
+        if (z == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        var y = document.forms["contact-frm"]["client_name"].value;
+        if (y == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        var z = document.forms["contact-frm"]["client_name"].value;
+        if (z == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+
+</script>
+<div class="container" style="background: rgba(3,28,37,0.8);margin-top:50px;">
+    <div class="row" style="padding:50px 50px 10px 35px;">
+        <div class="row">
+            <!-- <div class="col-sm-12 contactus" style="margin-bottom: 0px">
+            <h1>Contact</h1>
+        </div> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="row" style="padding:0px; color: black;">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 contact-message" style="padding: 0px 50px 0px 50px">
+                        <p>We the Harlem Dreams truly appreciate our fans and support. Feel free to contact us for any
+                            help
+                            or questions
+                            that you may have. We look forward to hearing from you or seeing you at one of our future
+                            events.
+                            Thank you for visiting the Harlem Dreams website and we look forward to getting back to you
+                            soon.</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-right:;">
+                    <div class="col-sm-8" style="padding-right: 45px;">
+                        <div id="contact">
+                            <form name="contact-frm" action="/process" method="post" onsubmit="return validateForm()">
+                                <div class="form-group ">
+
+                                    {% csrf_token %}
+
+                                    <label for="name ">Name</label>
+                                    <br>
+                                    <input class="form-control " type="text " name="client_name" required>
+                                    <br>
+                                    <label for="subject ">Subject</label>
+                                    <br>
+                                    <input class="form-control " type="text " name="client_subject" required>
+                                    <br>
+                                    <label for="email ">Email</label>
+                                    <br>
+                                    <input class="form-control " type="text " name="client_email" required>
+                                    <br>
+                                    <label for="message ">Message</label>
+                                    <br>
+                                    <textarea name="client_message" class="form-control " id=" " cols="10" rows="10"
+                                        required>
+                    </textarea>
+                                    <br>
+                                    <button>Submit</button>
+
+                                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                                    <div style="margin-top: 25px;" class="g-recaptcha"
+                                        data-sitekey="6LcHqXAUAAAAACeJbh02UC3iajXx9znDQVdolwlb"></div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 contact-bar">
+                        <h1>Contact Us</h1>
+                        <h4>Phone</h4>
+                        <p>
+                            <a href="tel:{{phone}}">
+                                <i class="fa fa-phone" style="color: white;"></i>&nbsp;{{phone}}</a>
+                        </p>
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:{{email}}">
+                                <i class="fa fa-envelope" style="color: white;"></i>&nbsp;{{email}}</a>
+                        </p>
+                    </div>
+
+                    <div class="sexy-line"></div>
+                </div>
+                <div class="row ">
+                    <div class="col-sm-12 d-none d-sm-block" style="margin-bottom: 25px;">
+                        <img src="{% static 'dream_app/images/logo2.png' %} "
+                            style="z-index: -1; display: block; margin-left: auto;margin-right:auto; margin-top: 25px"
+                            width="40px" alt=" ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
