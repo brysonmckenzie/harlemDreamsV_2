@@ -82,7 +82,7 @@ class Player(models.Model):
 
 
 class Video(models.Model):
-    title = models.CharField(max_length=3, blank=True, null=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField(max_length=200)
     link = models.TextField(max_length=1000)
     active = models.BooleanField(default=True)

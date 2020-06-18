@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 
-from .models import Event, Player, Photo, Notice, SiteConfiguration
+from .models import Event, Player, Photo, Notice, SiteConfiguration, Video
 
 from django.core.mail import send_mail
 
@@ -138,8 +138,15 @@ def founder(request):
 
 
 def media(request):
+    videos = Video.objects.all()
+    
 
-    return render(request, 'dream_app/media.html')
+    context = {
+        "videos":videos,
+    }
+
+
+    return render(request, 'dream_app/media.html', context)
 
 
 def process_contact(request):

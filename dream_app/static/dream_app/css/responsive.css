@@ -6,7 +6,8 @@
 
 @media screen and (min-width:996px) {
     .nav-link {
-        /* margin-left: 40px; */
+        margin-left: 25px;
+        letter-spacing: 5px;
     }
 }
 
@@ -210,7 +211,7 @@
         /* float: left; */
     }
     /* body {
-        overflow-x: hidden !important;
+        dsx: hidden !important;
     } */
     .founder-pic {
         /* background: white; */
@@ -300,7 +301,7 @@
     .footer-sz {
         text-align: center;
         color: white;
-        display: inline;
+        display: block;
     }
     #left-fanbox {
         margin-top: 0;
@@ -469,6 +470,9 @@
         margin-top: 20px;
         text-align: center;
     }
+    .nav-link {
+        /* margin-right: 0  */
+    }
 }
 
 @media screen and (max-width: 992px) and (min-width: 576px) {
@@ -476,6 +480,9 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .pad {
+        padding: 0px;
     }
 }
 
@@ -510,7 +517,7 @@
     .nav-link {
         border: 1px solid white;
         margin-bottom: 20px;
-        letter-spacing: 10px;
+        /* letter-spacing: 10px; */
         /* margin-left: 70px; */
     }
     .nav-links:hover {

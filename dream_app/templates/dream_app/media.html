@@ -40,16 +40,19 @@
             <div class="video-container"><iframe class="video-media"
                     src="https://www.youtube-nocookie.com/embed/J7wx-U_3AeI?rel=0&amp;" frameborder="0"
                     allowfullscreen></iframe>
-                    <h1 class="video-header">Video Description</h1>
+                    {% for video in videos %}
+                    <h1 class="video-header">{{video.title}}</h1>
+                    {% endfor %}
                     <p class="vid-bottom-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minima.</p>
+                    {% endfor %}
             </div>
         </div>
         <div class="col-sm-3 order-sm-1 vid-list">
             <div class="row">
                 <div class="list">
                     <!-- <img class="vid-prebox" src="{% static 'dream_app/images/logo2.png' %}" alt=""> -->
-                    <h4 class="vid-title">Test</h4>
-                    <p class="vid-desc">Lorem, ipsum.</p>
+                    <h4 class="vid-title">{{title}}</h4>
+                    <p class="vid-desc">{{description}}</p>
                     <p class="vid-time"><i class="fas fa-play"></i>&nbsp;10.26</p>
                 </div>
          
