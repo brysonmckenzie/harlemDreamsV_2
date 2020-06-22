@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+k0%x@b9u=0gfk_41k_=_=@p)=%4&_6nx53)i7te*aa0vco8m-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'harlemDreams.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'hdreamsdb',
+         'NAME': 'hdreams',
          'USER': 'admin',
          'PASSWORD': 'bluemonkey',
          'HOST': 'localhost',
@@ -149,3 +149,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# SMTP
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'a2nlvphout-v01.shr.prod.iad2.secureserver.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@harlemdreams.net'
+EMAIL_HOST_PASSWORD = 'longbeach2006!'
+
+# reCAPTCHA
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LcHqXAUAAAAAAUE04nczeIVXmHxCv4C-_uo85Wj'
+
+
