@@ -1,0 +1,7 @@
+<svg id="mlvp-play" xmlns="http://www.w3.org/2000/svg" width="44" height="40" viewBox="0 0 44 40">
+  <rect id="Rectangle_1" data-name="Rectangle 1" width="44" height="40" fill="#fff" opacity="0"/>
+  <g id="Group_1" data-name="Group 1" transform="translate(-6 -28)">
+    <path id="Path_1" data-name="Path 1" d="M47.88,38.481a5.118,5.118,0,0,0-3.6-3.624C41.1,34,28.366,34,28.366,34s-12.737,0-15.913.857a5.118,5.118,0,0,0-3.6,3.624C8,41.678,8,48.348,8,48.348s0,6.67.851,9.867a5.118,5.118,0,0,0,3.6,3.624c3.176.857,15.913.857,15.913.857s12.737,0,15.913-.857a5.118,5.118,0,0,0,3.6-3.624c.851-3.2.851-9.867.851-9.867S48.731,41.678,47.88,38.481Z" fill="#282828"/>
+    <path id="Path_2" data-name="Path 2" d="M78,81.944l10.646-6.056L78,69.831Z" transform="translate(-53.8 -27.539)" fill="#fff"/>
+  </g>
+</svg>

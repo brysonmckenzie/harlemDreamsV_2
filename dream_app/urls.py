@@ -13,4 +13,6 @@ urlpatterns = [
     path('sponsors', views.sponsors, name ='sponsors'),
     path('founders', views.founder, name ='founders'),
     path('dreamsmedia', views.media, name ='dreamsmedia'),
+    path('dreamsmedia/photos', views.media, name ='media-photos'),
+    path('hdreams-camp', views.camp, name ='camp'),
 ]

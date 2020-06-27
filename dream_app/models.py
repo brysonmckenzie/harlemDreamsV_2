@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 from django.db import models
-# from embed_video.fields import EmbedVideoField
 
 
 class Event(models.Model):
@@ -21,8 +20,6 @@ class Event(models.Model):
     def __str__(self):
         return(self.opponent + " vs The Harlem Dreams")
 
-# class Item(models.Model):
-#     video = EmbedVideoField()
 
 
 class Photo(models.Model):
@@ -40,7 +37,22 @@ class Photo(models.Model):
 
     def __str__(self):
         return(self.name + " - " + self.description)
+ 
+class mediaPhoto(models.Model):
+    name = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='media-carousel')
+    description = models.CharField(max_length=100)
+    active = models.BooleanField(default=True)
+    photo_order = models.PositiveIntegerField(
+        default=0, blank=False, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta(object):
+        ordering = ['photo_order']
+
+    def __str__(self):
+        return(self.name + " - " + self.description)
 
 
 class Notice(models.Model):
@@ -53,7 +65,7 @@ class Notice(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        if self.active == True:
+        if self.active:
             return(self.name + "(active)")
         else:
             return(self.name + "(inactive)")
@@ -78,7 +90,10 @@ class Player(models.Model):
         ordering = ['player_order']
 
     def __str__(self):
-        return(self.name)
+        if self.active:
+            return(self.name + "(active)")
+        else:
+            return(self.name + "(inactive)")
 
 
 class Video(models.Model):
@@ -92,13 +107,23 @@ class Video(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta(object):
-            ordering = ['video_order']
-
+        ordering = ['video_order']
 
     def __str__(self):
         return(self.title)
 
-        
+
+class Camp(models.Model):
+    camp_title = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    time = models.TimeField(auto_now=False, auto_now_add=False)
+    info = models.TextField(max_length=600, blank=True, null=False)
+    info_2 = models.TextField(max_length=600, blank=True, null=False)
+    event_info = models.TextField(max_length=600, blank=True, null=False)
+    event_image = models.ImageField(upload_to='camps')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class SiteConfiguration(models.Model):
     facebook = models.CharField(max_length=150, blank=True, null=True)

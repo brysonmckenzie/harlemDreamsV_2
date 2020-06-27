@@ -149,6 +149,18 @@ def media(request):
     return render(request, 'dream_app/media.html', context)
 
 
+def media(request):
+    videos = Video.objects.all()
+    
+
+    context = {
+        "videos":videos,
+    }
+
+
+    return render(request, 'dream_app/media-photo.html', context)
+
+
 def process_contact(request):
 
     if request.method == 'POST':
@@ -168,7 +180,13 @@ def process_contact(request):
         return redirect('/')
 
 
-def notice(request):
 
-    return redirect('/')
 
+def camp(request):
+
+
+    context = {
+        
+    }
+
+    return render(request, 'dream_app/camp.html', context)
