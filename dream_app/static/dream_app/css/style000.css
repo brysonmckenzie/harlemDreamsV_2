@@ -788,7 +788,7 @@ a:hover {
 }
 
 .cj-txt p:hover {
-    color: blue;
+    color: #2974B2;
 }
 
 /* .cj-txt a: */
@@ -838,7 +838,7 @@ a:hover {
 }
 
 .event-sec {
-    /* margin-top: 75px; */
+    margin-bottom: -82px;
     background: rgba(3, 28, 37, 0.8);
     /* padding: 10px 0px 10px 0px !important;
     width: 100 !important; */
