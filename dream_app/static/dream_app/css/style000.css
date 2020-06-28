@@ -680,13 +680,16 @@ a:hover {
 .sponsor-shop {
     height: 900px;
     margin-top: 50px;
-    padding: 50px 50px 20px 50px;
+    padding: 0px 30px 0px 30px;
     /* min-height: 595px; */
     background: rgba(3, 28, 37, 0.8);
     font-family: Luckiest Guy, cursive;
     color: white;
+    box-shadow: #000000 0px 0px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* padding-bottom: 20px; */
 }
-
 .shop-cs {
     /* position: relative; */
     top: 50%;
@@ -869,10 +872,12 @@ a:hover {
 
 .sponsor-border {
     padding: 0px 20px 0px 20px;
-    font-family: 'Krona One', sans-serif;
-    font-size: 10pt;
+    font-family: 'Bebe Neue', sans-serif;
+    font-size: 15pt;
     border-right: 1px #000000 solid;
-    background: rgba(245, 245, 245, .6)
+    background: rgba(245, 245, 245, .6);
+    line-height: 1.4;
+    font-weight: 900;
 }
 
 .sponsor-border2 {

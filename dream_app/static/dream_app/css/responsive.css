@@ -377,6 +377,7 @@
     }
     .sponsor-border {
         border: unset;
+        margin-bottom: 20px;
     }
     .contact-bar {
         padding: 0px 30px 0px 30px;
@@ -513,7 +514,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .nav-link {
         margin-top: 10px;
         border: 1px solid white;

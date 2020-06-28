@@ -14,6 +14,15 @@
     float: right;
   }
 
+  #cj-bg {
+    background: #4e78af;
+    border-top: 1px solid #ffffff;
+    background-size: cover;
+    background-image: url(static/dream_app/images/12213.jpg);
+    background-position: top;
+
+  }
+
 
   .horizontal-line {
     border: white solid 5px;
@@ -171,7 +180,7 @@
       <div class="basket d-none d-sm-block">
 
       </div>
-      <img id="springz" class="img-responsivecenter-block d-none d-sm-block"
+      <img id="springz" class="img-responsive center-block d-none d-sm-block"
         src="{% static 'dream_app/images/springz3.png' %}" alt="">
     </div>
 
@@ -185,7 +194,7 @@
         <div class="col-lg-6 d-block d-sm-none">
           <!-- <img class="center5" src="{% static 'dream_app/images/left-fanboy.png' %}" alt=""> -->
         </div>
-        <div class="cj-txt col-sm-12 ">
+        <div class="col-sm-12 d-none d-sm-block">
           <a target="_blank" href="https://www.youtube-nocookie.com/embed/JJymzpqcRUo">
             <P style="text-align:center; ">
               Brand Ambassador CJ on NBC Hit Show Little Big Shots With Steve Harvey</p>
@@ -193,8 +202,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12" style="background: #4e78af; border-top: 1px solid #ffffff" >
-          <img class="center5 img-responsive" style="width: 8rem; height:100%; padding: 10px; " src="{% static 'dream_app/images/left-fanboy.png' %}" alt=""> 
+        <div class="col-sm-12" id="cj-bg">
+          <img class="center5 img-responsive" style="width: 8rem; height:100%; padding: 10px; "
+            src="{% static 'dream_app/images/left-fanboy.png' %}" alt="">
         </div>
       </div>
     </div>
