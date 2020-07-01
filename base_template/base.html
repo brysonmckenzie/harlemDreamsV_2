@@ -52,6 +52,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'dream_app/css/slicebox.css'%}" />
     <link rel="stylesheet" type="text/css" href="{% static 'dream_app/css/custom.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'dream_app/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'dream_app/mylist-player/css/mylist-player.css' %}" />
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
@@ -76,7 +77,7 @@
 
 
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 
 
 
@@ -90,6 +91,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        $(function () {
+          var Page = (function () {
+            var $navArrows = $('#nav-arrows').hide(),
+              $navDots = $('#nav-dots').hide(),
+              $nav = $navDots.children('span'),
+              $shadow = $('#shadow').hide(),
+              slicebox = $('#sb-slider').slicebox({
+                onReady: function () {
+                  $navArrows.show();
+                  $navDots.show();
+                  $shadow.show();
+                },
+                onBeforeChange: function (pos) {
+                  $nav.removeClass('nav-dot-current');
+                  $nav.eq(pos).addClass('nav-dot-current');
+                }
+              }),
+              init = function () {
+                initEvents();
+              },
+              initEvents = function () {
+                // add navigation events
+                $navArrows.children(':first').on('click', function () {
+                  slicebox.next();
+                  return false;
+                });
+                $navArrows.children(':last').on('click', function () {
+                  slicebox.previous();
+                  return false;
+                });
+                $nav.each(function (i) {
+                  $(this).on('click', function (event) {
+                    var $dot = $(this);
+                    if (!slicebox.isActive()) {
+                      $nav.removeClass('nav-dot-current');
+                      $dot.addClass('nav-dot-current');
+                    }
+                    slicebox.jump(i + 1);
+                    return false;
+                  });
+                });
+              };
+            return { init: init };
+          })();
+          Page.init();
+        });
+      </script>
+      <script type="text/javascript">
+        var exitBtn = document.getElementById("vexit");
+        var flow = document.querySelector("body");
+        var modal = document.querySelector(".vid-modal");
+      
+        $(window).on('beforeunload', function () {
+          $('body').hide();
+          $(window).scrollTop(0);
+        });
+      
+      
+        exitBtn.onclick = function () {
+      
+          modal.style.display = "none";
+          flow.style.overflowY = "scroll";
+          console.log("working")
+      
+          var exitBtn2 = document.getElementById("notice-exit");
+          var notice = document.querySelector(".hide-notice");
+      
+      
+      
+      
+          exitBtn2.onclick = function () {
+      
+            notice.style.display = "none";
+      
+            console.log("working2")
+      
+          }
+      
+        }
+</script>
 
 </head>
 
