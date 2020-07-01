@@ -21,7 +21,6 @@ class Event(models.Model):
         return(self.opponent + " vs The Harlem Dreams")
 
 
-
 class Photo(models.Model):
     name = models.CharField(max_length=30)
     image = models.ImageField(upload_to='carousel')
@@ -37,7 +36,8 @@ class Photo(models.Model):
 
     def __str__(self):
         return(self.name + " - " + self.description)
- 
+
+
 class mediaPhoto(models.Model):
     name = models.CharField(max_length=30)
     image = models.ImageField(upload_to='media-carousel')
@@ -114,15 +114,19 @@ class Video(models.Model):
 
 
 class Camp(models.Model):
-    camp_title = models.CharField(max_length=100, blank=True, null=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
     date = models.DateField(auto_now=False, auto_now_add=False)
     time = models.TimeField(auto_now=False, auto_now_add=False)
     info = models.TextField(max_length=600, blank=True, null=False)
-    info_2 = models.TextField(max_length=600, blank=True, null=False)
+    info_detail = models.TextField(max_length=600, blank=True, null=False)
+    detail_info = models.TextField(max_length=600, blank=True, null=False)
     event_info = models.TextField(max_length=600, blank=True, null=False)
     event_image = models.ImageField(upload_to='camps')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return(self.title + " "  + "- Camp set for " + str(self.date))
 
 
 class SiteConfiguration(models.Model):

@@ -10,11 +10,12 @@
     #myFooter {
         padding-top: 9px;
     }
+    @media screen and (max-width: 992px) {
+        .camp-btn
+    }
 </style>
 
-
-
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
             <h2
@@ -27,13 +28,19 @@
             <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid" alt="Responsive image">
         </div>
     </div>
-    <div class="jumbotron camp-list">
-        <h1 class="display-4">North Carolina Dreams Camp</h1>&nbsp;<h3>Jun. 28</h3>
-        <p class="lead">Information on attending Harlem Dreams .</p>
+</div>
+
+<div class="container ">
+
+    {% for camp in camps %}
+    <div class="jumbotron camp-list camp-jumbotron">
+        <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;<h3 style="#fff">{{camp.date}} - {{camp.time}}</h3>
+        <p class="lead" style="color: #fff">{{camp.info}}</p>
         <hr class="my-4">
-        <p>Specifics or disclaimers can go here.</p>
-        <a class="btn btn-primary btn-lg camp-btn" href="#" role="button">Learn more</a>
+        <p style="color: #fff>"{{camp.info_detail}}</p>
+        <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn more</a>
     </div>
+    {% endfor %}
 
 
     <!-- <div class="row">

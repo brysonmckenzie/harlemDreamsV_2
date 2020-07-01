@@ -11,10 +11,6 @@
     }
 }
 
->.k {
-    margin: 0px 0px 10px;
-}
-
 @media screen and (min-width:561px) and (max-width:996px) {
     .hide {
         display: none;

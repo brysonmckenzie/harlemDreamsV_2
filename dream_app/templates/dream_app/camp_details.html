@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+<style>
+    body {
+        background-image: url(/static/dream_app/images/white_hoop.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #myFooter {
+        padding-top: 9px;
+    }
+</style>
+
+
+
+<div class="container camp-detail-container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2
+                style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px;">
+                {{camp.title}} <br><span class="camp-date" style="color:#2974B2;;">{{camp.date}}</span></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-7 camp-event">
+            <p>{{camp.event_info}}</p>
+        </div>
+        <div class="col-sm-5 camp-detail">
+            <img class="" src="{{camp.event_image.url}}" alt="">
+        </div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 camp-info">
+            <h1>Camp Details</h1>
+            <p>{{camp.detail_info}}</p>
+        </div>
+        <div class="col-sm-12">
+            <a class="btn btn-primary btn-lg camp-btn" style="margin: 0 auto; display: block; width: 150px;" href=""role="button">Register</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

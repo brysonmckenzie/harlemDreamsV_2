@@ -690,6 +690,7 @@ a:hover {
     margin-right: 20px;
     /* padding-bottom: 20px; */
 }
+
 .shop-cs {
     /* position: relative; */
     top: 50%;
@@ -789,6 +790,10 @@ a:hover {
 
 .cj-txt p:hover {
     color: #2974B2;
+}
+
+.photo {
+    padding: 50px 0px;
 }
 
 /* .cj-txt a: */
@@ -1793,8 +1798,10 @@ a:hover {
 .camp-img {
     display: block;
     margin: auto;
-    box-shadow: 0px 0px 10px;
-    width: 100%
+    box-shadow: 0px 0px 5px;
+    /* width: 95% */
+    width: 720px;
+    border: outset 3px #fff
 }
 
 .camp-pic {
@@ -1804,6 +1811,9 @@ a:hover {
 .camp-btn {
     background: rgba(3, 28, 37, 0.8)!important;
     border: none;
+    display: block;
+    width: 150px;
+    margin: auto;
 }
 
 .camp-btn:hover {
@@ -1814,5 +1824,80 @@ a:hover {
 
 ;
 .camp-list {
-    font-family: 'Bebe Neue', sans-serif !important;
+    font-family: 'Bebas Neue', sans-serif !important;
+    /* color: #2974B2, */
+    box-shadow: #fff 0px 0px 10px;
+    width: 70%;
+}
+
+.camp-list>h1 {
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: #2974B2;
+ }
+
+.camp-list>h3 {
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: #2974B2;
+    font-size: 22pt;
+
+}
+
+.camp-detail {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.camp-detail>img {
+    display: block;
+    margin: 0 auto;
+    /* box-shadow: #000 0px 0px 10px; */
+    /* border: 3px outset rgb(3, 27, 38); */
+    width: 100%
+}
+
+.camp-date {
+    font-size: 22pt;
+}
+
+.camp-info {}
+
+.camp-event>p {
+    text-align: left;
+    /* margin-top: 100px; */
+    font-size: 15pt;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+}
+
+.camp-info>p {
+    font-size: 18pt;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.camp-info>h1 {
+    font-size: 22pt;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0px;
+    color: #2974B2;
+}
+
+.camp-info>p {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.camp-detail-container {
+    background: rgba(225, 225, 225, 0.8);
+    padding: 50px 50px;
+    margin-top: 4rem;
+    box-shadow: #000 0px 0px 10px
+}
+
+.camp-jumbotron {
+    background: #212529f0;
+    border-radius: unset;
+    padding: 2rem !important;
 }

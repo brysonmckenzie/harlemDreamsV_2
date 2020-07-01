@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 
-from .models import Event, Player, Photo, Notice, SiteConfiguration, Video
+from .models import Event, Player, Photo, Notice, SiteConfiguration, Video, Camp
 
 from django.core.mail import send_mail
 
@@ -33,9 +33,8 @@ def index(request):
         'instagram': site.instagram,
         'twitter': site.twitter,
         'phone': site.homepage_phone,
-       
-    }
 
+    }
 
     return render(request, 'dream_app/index.html', context)
 
@@ -109,7 +108,6 @@ def team(request):
 
     # print(hdp)
 
-
     return render(request, 'dream_app/team.html', context)
 
 
@@ -122,7 +120,6 @@ def contact(request):
         'phone': contact_phone,
         'email': contact_email,
     }
-
 
     return render(request, 'dream_app/contact.html', context)
 
@@ -137,28 +134,33 @@ def founder(request):
     return render(request, 'dream_app/founders.html')
 
 
-def media(request):
     videos = Video.objects.all()
-    
 
     context = {
-        "videos":videos,
+        "videos": videos,
     }
-
 
     return render(request, 'dream_app/media.html', context)
 
 
-def media(request):
+def media_videos(request):
     videos = Video.objects.all()
-    
 
     context = {
-        "videos":videos,
+        "videos": videos,
     }
 
+    return render(request, 'dream_app/media-videos.html', context)
 
-    return render(request, 'dream_app/media-photo.html', context)
+
+def media_photos(request):
+    photos = Photo.objects.all()
+
+    context = {
+        'photos': photos,
+    }
+
+    return render(request, 'dream_app/media-photos.html', context)
 
 
 def process_contact(request):
@@ -180,13 +182,21 @@ def process_contact(request):
         return redirect('/')
 
 
-
-
 def camp(request):
 
+    camp = Camp.objects.all()
 
     context = {
-        
+        'camps': camp
     }
 
     return render(request, 'dream_app/camp.html', context)
+
+
+def camp_detail(request, id):
+    camp = Camp.objects.get(id=id)
+    camp = get_object_or_404(Camp, id=id)
+
+    context = {'camp': camp}
+
+    return render(request, 'dream_app/camp_details.html', context)

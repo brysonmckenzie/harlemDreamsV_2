@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin, actions
 from adminsortable2.admin import SortableAdminMixin
-from .models import (Event, Player, Photo, Notice, SiteConfiguration, Video)
+from .models import (Event, Player, Photo, Notice, SiteConfiguration, Video, Camp)
 
 
 class AdminSite(admin.AdminSite):
@@ -19,6 +19,7 @@ class EventAdmin(admin.ModelAdmin):
 class VideoAdmin(SortableAdminMixin, admin.ModelAdmin):
     admin.site.register(Video)
 
+
 class PlayerAdmin(SortableAdminMixin, admin.ModelAdmin):
 
     admin.site.register(Player)
@@ -27,6 +28,7 @@ class PlayerAdmin(SortableAdminMixin, admin.ModelAdmin):
 class PhotoAdmin(admin.ModelAdmin):
 
     admin.site.register(Photo)
+
 
 class NoticeAdmin(admin.ModelAdmin):
     admin.site.register(Notice)
@@ -40,3 +42,7 @@ class SiteConfigurationAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, *args, **kwargs):
         return False if self.SiteConfiguration.objects.count() > 0 else super().has_add_permission(request)
+
+
+class CampAdmin(admin.ModelAdmin):
+    admin.site.register(Camp)

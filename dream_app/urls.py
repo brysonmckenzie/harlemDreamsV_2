@@ -12,7 +12,8 @@ urlpatterns = [
     path('process', views.process_contact, name ='process'),
     path('sponsors', views.sponsors, name ='sponsors'),
     path('founders', views.founder, name ='founders'),
-    path('dreamsmedia', views.media, name ='dreamsmedia'),
-    path('dreamsmedia/photos', views.media, name ='media-photos'),
-    path('hdreams-camp', views.camp, name ='camp'),
+    path('videos', views.media_videos, name ='media-videos'),
+    path('photos', views.media_photos, name ='media-photos'),
+    path('camps', views.camp, name ='camp_list'),
+    path('camps/<int:id>/', views.camp_detail, name ='camp_detail'),
 ]
