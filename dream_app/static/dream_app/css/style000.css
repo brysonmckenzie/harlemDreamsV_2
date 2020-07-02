@@ -227,16 +227,12 @@ position: absolute;
 
 #lefty {
     width: 85%;
-    margin-top: 3.1rem;
-    /* margin-bottom: 200px; */
-    /* position: absolute; */
-    /* top: 150px; */
-    /* right: 20px; */
+    margin-top: 10.5rem;
 }
 
 .event-desc::before {
     content: "Address:";
-    color: Black;
+    color: black;
 }
 
 .event-description {
@@ -1498,7 +1494,7 @@ a:hover {
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
     color: white;
-    font-size: 25pt;
+    font-size: 2515pt;
 }
 
 .no-x {}
@@ -1866,6 +1862,7 @@ a:hover {
     font-size: 15pt;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
+    text-align: CENTER;
 }
 
 .camp-info>p {

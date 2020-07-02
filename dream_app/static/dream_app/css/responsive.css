@@ -10,6 +10,11 @@
         letter-spacing: 5px;
     }
 }
+@media screen and (max-width:996px) {
+    .nav-link {
+        border: 1px solid white
+    }
+}
 
 @media screen and (min-width:561px) and (max-width:996px) {
     .hide {
@@ -513,7 +518,7 @@
 @media screen and (max-width: 1023px) {
     .nav-link {
         margin-top: 10px;
-        border: 1px solid white;
+        /* border: 1px solid white; */
         margin-bottom: 0px;
         z-index: 0;
         /* letter-spacing: 10px; */
