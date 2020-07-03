@@ -33,9 +33,8 @@ ALLOWED_HOSTS = [
     'theharlemdreams.com',
     'www.harlemdreams.net',
     'www.theharlemdreams.net',
-    'www.theharlemdreams.com',  
+    'www.theharlemdreams.com'
 ]
-
 
 
 # Application definition
