@@ -93,15 +93,15 @@ WSGI_APPLICATION = 'harlemDreams.wsgi.application'
 # }
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'hdreams',
-         'USER': 'admin',
-         'PASSWORD': 'bluemonkey',
-         'HOST': 'localhost',
-         'PORT': '5432',
-     }
- }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hdreams',
+        'USER': 'admin',
+        'PASSWORD': 'bluemonkey',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -152,7 +152,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'a2nlvphout-v01.shr.prod.iad2.secureserver.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@harlemdreams.net'
-EMAIL_HOST_PASSWORD = 'longbeach2006!'
+EMAIL_HOST_PASSWORD = 'Longbeach2006!'
 
 # reCAPTCHA
 

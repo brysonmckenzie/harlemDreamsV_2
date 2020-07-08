@@ -80,49 +80,30 @@
 
     </div>
 </div>
-{% endif%}
-{% endfor %}
-
-<!-- Harlems Dreams MEME --- Beginning -->
+{% endif%}{% endfor %}
 
 
 
-
-
-<div class="container">
-  <div class="row">
-    <div class="vid-modal">
-      <span id="vexit" ><i class="fa fa-window-close ex" aria-hidden="true"></i></span>
-      <div class="vid-box">
-        <h1 id="modal-font">Harlem Dreams Basketball</h1>
-        <iframe id="front-video"
-          src="https://www.youtube-nocookie.com/embed/Hua4MRTKmy0?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
-          frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
+<div id=vm class="vid-modal container">
+  <!-- <span id="vexit"><i class=" fa fa-window-close ex" aria-hidden="true"></i></span> -->
+  <div class="vid-box">
+    <h1 id="modal-font">Harlem Dreams Basketball</h1>
+    <iframe id="front-video"
+      src="https://www.youtube-nocookie.com/embed/Hua4MRTKmy0?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
+      frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
 
 
 <!-- additional info for app advertisement. -->
-
-
-
 <!-- Harlems Dreams MEME --- End -->
-
 <div class="container-fluid header-box">
   <div class="row">
-    <div class="col-lg-12" id="woodgrain-backdrop" style="margin-top: -1px;">
+    <div class="col-sm-12" id="woodgrain-backdrop" style="margin-top: -1px;">
       <img id="dreams_logo" class="center" src="{% static 'dream_app/images/logo2.png' %}" alt="Harlem Dream Logo">
     </div>
   </div>
-
-  <div class="sound-video"></div>
-
-
-
-
 
   <div class="row">
     <div class="col-sm-12 top-specs">
@@ -166,12 +147,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
 <div class="container-fluid">
   <div class="row" id="mob-push" style="margin-top: unset; padding: 0px 10px;">
     <div class="col-sm-4 ">
@@ -192,7 +167,7 @@
         <div class="col-lg-6 d-block d-sm-none">
         </div>
         <div class="col-sm-12 cj-txt">
-          <a target="_blank" href="https://www.youtube-nocookie.com/embed/JJymzpqcRUo">
+          <a target="_blank" href="#">
             <P style="text-align:center; font-family: 'Bebe Neue', sans-serif;">
               Brand Ambassador CJ on NBC Hit Show Little Big Shots With Steve Harvey</p>
           </a>
@@ -205,11 +180,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
     <div class="col-sm-4" style="padding:0px 20px 0px 5px;">
       <div class="row">
         <div id="lefty-profile" style="padding: 0px 20px 0px 20px">
@@ -222,33 +192,28 @@
     </div>
   </div>
 </div>
-
-
 {% if photos|length != 0 and c_off == False %}
 <div class="container-fluid event-sec">
   <div class="row" style="padding: 100px 0; border-top: white 3px solid; border-bottom: white 3px solid;">
     <div class="col-sm-12">
       <a href="{% url 'media-photos'%}">
-      <ul id="sb-slider" class="sb-slider" style="max-height: 500px; max-width: 700px; overflow: hidden;">
-        {% for photo in photos %}
-        {% if photo.active == True %}
-        <li>
-          <img class="img-responsive" src="{{ photo.image.url }}" alt="image1" />
-          <div class="sb-description">
-            <h3> {{ photo.description }} </h3>
-          </div>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </a>
+        <ul id="sb-slider" class="sb-slider" style="max-height: 500px; max-width: 700px; overflow: hidden;">
+          {% for photo in photos %}
+          {% if photo.active == True %}
+          <li>
+            <img class="img-responsive" src="{{ photo.image.url }}" alt="image1" />
+            <div class="sb-description">
+              <h3> {{ photo.description }} </h3>
+            </div>
+          </li>
+          {% endif %}{% endfor %}
+        </ul>
+      </a>
     </div>
   </div>
 </div>
 </div>
-
 {% else %}
-
 <div class="container-fluid center3 lg-tp">
   <div class="row">
     <div class="col-sm-12" style="padding: 0px 30px">
@@ -259,10 +224,4 @@
 </div>
 
 {% endif %}
-
-
-
-
-
-<script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
 {% endblock %}

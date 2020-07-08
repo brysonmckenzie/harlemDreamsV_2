@@ -92,6 +92,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
 
+
+
+    <!-- slice box code -->
     
     <script type="text/javascript">
         $(function () {
@@ -141,39 +144,8 @@
           Page.init();
         });
       </script>
-      <script type="text/javascript">
-        var exitBtn = document.getElementById("vexit");
-        var flow = document.querySelector("body");
-        var modal = document.querySelector(".vid-modal");
-      
-        $(window).on('beforeunload', function () {
-          $('body').hide();
-          $(window).scrollTop(0);
-        });
-      
-      
-        exitBtn.onclick = function () {
-      
-          modal.style.display = "none";
-          flow.style.overflowY = "scroll";
-          console.log("working")
-      
-          var exitBtn2 = document.getElementById("notice-exit");
-          var notice = document.querySelector(".hide-notice");
-      
-      
-      
-      
-          exitBtn2.onclick = function () {
-      
-            notice.style.display = "none";
-      
-            console.log("working2")
-      
-          }
-      
-        }
-</script>
+
+
 
 </head>
 
@@ -252,7 +224,7 @@
                             <a href="/sponsors">Sponsors</a>
                         </li>
                         <li>
-                            <a href="/camps">Sponsors</a>
+                            <!-- <a href="/camps">Sponsors</a> -->
                         </li>
                     </ul>
                 </div>
@@ -265,7 +237,7 @@
                             <a href="founders">Founders</a>
                         </li>
                         <li>
-                            <a href="/dreamsmedia">Media</a>
+                            <a href="#">Media</a>
                         </li>
                         <li>
                             <a href="/contact-page">Contact us</a>
@@ -317,7 +289,7 @@
                     </p>
                 </div>
                 <div class="col-sm-4">
-                    <a class="footer-sz" href="http://www.sixelevenwebdevelopment.com">
+                    <a class="footer-sz" href="#">
                         <p class="blue" style="text-align: center; color: white; font-weight: bold ">Six Eleven
                             Web Development</p>
                     </a>

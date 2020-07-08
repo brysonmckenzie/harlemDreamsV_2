@@ -14,15 +14,6 @@ def index(request):
     site = SiteConfiguration.objects.get(id=1)
     c_off = site.carousel_off
 
-    # links = SiteLink.objects.all()
-
-    # for link in links:
-
-    #     facebook = link.facebook
-    #     instagram = link.instagram
-    #     twitter = link.twitter
-    #     home_phone = link.homepage_phone
-
     context = {
         'message': event_message,
         'photos': Photo.objects.all(),
@@ -96,7 +87,7 @@ def team(request):
 
     for index in hdp:
         print(index.active)
-        if index.active == True:
+        if index.active is True:
             active_players = True
 
     print(active_players)
@@ -132,7 +123,6 @@ def sponsors(request):
 def founder(request):
 
     return render(request, 'dream_app/founders.html')
-
 
     videos = Video.objects.all()
 
@@ -174,7 +164,7 @@ def process_contact(request):
         from_email = settings.EMAIL_HOST_USER
 
         send_mail(server_subject, server_message, server_email, [
-                  'contact@harlemdreams.net'], fail_silently=False,)
+                  'info@harlemdreams.net'], fail_silently=False,)
 
         print('***** New Contact Info has Arrived *****')
         print(""" Success! Email Worked """)
