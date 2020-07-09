@@ -148,11 +148,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # SMTP
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'a2nlvphout-v01.shr.prod.iad2.secureserver.net'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@harlemdreams.net'
 EMAIL_HOST_PASSWORD = 'Longbeach2006!'
+DEFAULT_FROM_EMAIL = 'info@harlemdreams.net'
+SERVER_EMAIL = 'info@harlemdreams.net'
 
 # reCAPTCHA
 

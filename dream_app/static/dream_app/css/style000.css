@@ -1900,3 +1900,7 @@ border: #fff solid 2px;
     border-radius: unset;
     padding: 2rem !important;
 }
+
+.index-vid {
+    height: 1000px;
+}

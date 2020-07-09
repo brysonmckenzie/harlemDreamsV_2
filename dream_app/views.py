@@ -164,7 +164,7 @@ def process_contact(request):
         from_email = settings.EMAIL_HOST_USER
 
         send_mail(server_subject, server_message, server_email, [
-                  'info@harlemdreams.net'], fail_silently=False,)
+            'info@harlemdreams.net'], fail_silently=False,)
 
         print('***** New Contact Info has Arrived *****')
         print(""" Success! Email Worked """)
