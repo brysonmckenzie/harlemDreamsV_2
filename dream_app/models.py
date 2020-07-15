@@ -126,10 +126,11 @@ class Camp(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return(self.title + " "  + "- Camp set for " + str(self.date))
+        return(self.title + " " + "- Camp set for " + str(self.date))
 
 
 class SiteConfiguration(models.Model):
+    camp_title = models.CharField(blank=True, null=True, max_length=50)
     facebook = models.CharField(max_length=150, blank=True, null=True)
     instagram = models.CharField(max_length=150, blank=True, null=True)
     twitter = models.CharField(max_length=150, blank=True, null=True)

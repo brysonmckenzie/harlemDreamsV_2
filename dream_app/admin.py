@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin, actions
 from adminsortable2.admin import SortableAdminMixin
-from .models import (Event, Player, Photo, Notice, SiteConfiguration, Video, Camp)
+from .models import (Event, Player, Photo, Notice,
+                     SiteConfiguration, Video, Camp)
 
 
 class AdminSite(admin.AdminSite):
-    site_title = ('Harlem Dreams Basketball' )
+    site_title = ('Harlem Dreams Basketball')
 
 
 class EventAdmin(admin.ModelAdmin):

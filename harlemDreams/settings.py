@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
+SITE_ID = 2
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -40,7 +44,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'adminsortable2',
     'dream_app',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,7 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'adminsortable2',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -153,8 +158,8 @@ EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@harlemdreams.net'
 EMAIL_HOST_PASSWORD = 'Longbeach2006!'
-DEFAULT_FROM_EMAIL = 'info@harlemdreams.net'
-SERVER_EMAIL = 'info@harlemdreams.net'
+
+
 
 # reCAPTCHA
 

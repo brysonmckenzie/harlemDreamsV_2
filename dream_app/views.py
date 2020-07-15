@@ -175,9 +175,11 @@ def process_contact(request):
 def camp(request):
 
     camp = Camp.objects.all()
+    site = SiteConfiguration.objects.get(id=1)
 
     context = {
-        'camps': camp
+        'camps': camp,
+        'title': site.camp_title,
     }
 
     return render(request, 'dream_app/camp.html', context)

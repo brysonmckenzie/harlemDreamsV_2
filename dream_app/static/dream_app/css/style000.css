@@ -1234,18 +1234,12 @@ a:hover {
 
 
 .vid-modal {
-position: absolute;
-top: 115px;
-left: 50%;
-margin: 0 auto;
-/* z-index: 1; */
-transform: translateX(-50%);
-display: initial;
-width: 100%;
-height: 500px;
-background: rgba(0,0,0,.9);
-box-shadow: #fff 0px 0px 20px;
-border: #fff solid 2px;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    box-shadow: #fff 0px 0px 20px;
+    border-top: #fff solid 2px;
+    border-bottom: #fff solid 2px;
+    padding: 100px 0px;
 }
 #modal-font {
     text-align: center;
@@ -1258,9 +1252,9 @@ border: #fff solid 2px;
 .vid-box {
     width: 100%;
     /* height: 400px; */
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     top: 50%;
     /* vertical-align: middle; */
     padding: 0 10px;
