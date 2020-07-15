@@ -382,7 +382,7 @@ table {
     background: rgba(3, 28, 37, 0.8);
     color: black;
     margin: 50px 0px;
-    box-shadow: black 0px 10px 10px;
+    box-shadow: black 0px 0px 10px;
 }
 
 .fix-ball {
@@ -906,23 +906,12 @@ a:hover {
 }
 
 .sha {
-    /* background-image: url(/static/dream_app/images/OLO2ED0.jpg); */
     background-image: url(/static/dream_app/images/full_court.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
 
-#shadow {
-    /* border-bottom: 100px solid rgba(0, 0, 0, 0.9);
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    height: 0;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px; */
-}
+
 
 #trapezoid {
     border-bottom: 100px solid red;
@@ -1236,9 +1225,9 @@ a:hover {
 .vid-modal {
     width: 100%;
     background: rgba(0,0,0,.9);
-    box-shadow: #fff 0px 0px 20px;
+    /* box-shadow: #fff 0px 0px 20px; */
     border-top: #fff solid 2px;
-    border-bottom: #fff solid 2px;
+    border-bottom: #fff solid 4px;
     padding: 100px 0px;
 }
 #modal-font {
@@ -1250,21 +1239,11 @@ a:hover {
 }
 
 .vid-box {
-    width: 100%;
-    /* height: 400px; */
-    /* position: absolute; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    top: 50%;
-    /* vertical-align: middle; */
-    padding: 0 10px;
-    margin-right: 0 auto;
-    box-shadow: black 0px 10px 25px;
+    vertical-align: middle;
     padding-bottom: 10px;
 }
-
 #front-video {
-    width: 50rem;
+    width: 100%;
     height: 25rem;
     border: 2px white solid;
     margin: 0 auto;
