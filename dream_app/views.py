@@ -182,7 +182,7 @@ def camp(request):
         'title': site.camp_title,
     }
 
-    return render(request, 'dream_app/camp.html', context)
+    return render(request, 'dream_app/camp2.html', context)
 
 
 def camp_detail(request, id):

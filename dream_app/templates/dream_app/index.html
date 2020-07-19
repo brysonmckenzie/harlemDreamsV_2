@@ -23,6 +23,13 @@
 
   }
 
+  #muteButton {
+    display: block;
+    position: fixed;
+    right: 50px;
+    z-index: 1;
+    bottom: 25px;
+  }
 
   .horizontal-line {
     border: white solid 5px;
@@ -83,9 +90,9 @@
 {% endif%}{% endfor %}
 
 
+<!-- mute button for video -->
 
-
-
+<div id="muteButton" onclick="toggleSpeaker(this)"><i id="speaker"  class="fas fa-volume-up"></i></div>
 
 
 <!-- additional info for app advertisement. -->
@@ -145,9 +152,7 @@
   <div class="row">
     <div class="vid-box container">
       <h1 id="modal-font">Harlem Dreams Basketball</h1>
-      <iframe id="front-video"
-        src="https://www.youtube-nocookie.com/embed/Hua4MRTKmy0?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
-        frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="player" class="front-video"></div>
     </div>
   </div>
 </div>
@@ -230,5 +235,22 @@
   </div>
 </div>
 
+
+
 {% endif %}
+
+<script type="text/javascript" src="{% static 'dream_app/javascript/front-player.js' %}"></script>
+<script type="text/javascript">
+
+  function toggleSpeaker() {
+    $('#muteButton').click(function () {
+      $('.fas').toggleClass('fa-volume-off fa-volume-up'); 
+    });
+  }
+
+  });
+
+
+
+</script>
 {% endblock %}

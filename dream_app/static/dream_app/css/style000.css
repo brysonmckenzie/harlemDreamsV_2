@@ -1223,12 +1223,14 @@ a:hover {
 
 
 .vid-modal {
+    background-size: cover;
     width: 100%;
-    background: rgba(0,0,0,.9);
-    /* box-shadow: #fff 0px 0px 20px; */
+    background-image: linear-gradient( rgba(3, 27, 38, 0.7), rgba(3, 27, 38, 0.7) ), url(/static/dream_app/images/blue-star-bg.jpg);
     border-top: #fff solid 2px;
     border-bottom: #fff solid 4px;
     padding: 100px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #modal-font {
     text-align: center;
@@ -1242,15 +1244,16 @@ a:hover {
     vertical-align: middle;
     padding-bottom: 10px;
 }
-#front-video {
+.front-video {
     width: 100%;
-    height: 25rem;
+    height: 33rem;
     border: 2px white solid;
     margin: 0 auto;
     position: relative;
     right: 0;
     left: 0;
     display: block;
+    background: black;
 }
 
 #vexit {
@@ -1592,6 +1595,15 @@ a:hover {
     letter-spacing: 5px;
 }
 
+  #speaker{
+    color: rgb(104, 236, 43);
+    font-size: 30pt;
+  }
+  #speaker2{
+    color: red;
+    font-size: 30pt;
+  }
+
 #app {
     font-family: 'Bebas Neue', sans-serif;
 }
@@ -1771,7 +1783,7 @@ a:hover {
     margin: auto;
     box-shadow: 0px 0px 5px;
     /* width: 95% */
-    width: 720px;
+    width: 820px;
     border: outset 3px #fff
 }
 
@@ -1876,4 +1888,10 @@ a:hover {
 
 .index-vid {
     height: 1000px;
+}
+
+.camp-main {
+    padding: 100px 200px;
+    color: rgba(3, 27, 38, 0.8);
+    background: rgba(225, 225, 225, 0.6);
 }

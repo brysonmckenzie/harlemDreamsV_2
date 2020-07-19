@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+<style>
+    body {
+        background-image: url(/static/dream_app/images/white_hoop.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #myFooter {
+        padding-top: 9px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .camp-btn {}
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2
+                style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px;">
+                {{title}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 camp-pic">
+            <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid" width="1080px"
+                alt="Responsive image">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 camp-main">
+        <div class="camp-banner">
+            <h1>THIS SUMMER, LEARN HOW TO MAKE THE MOST OF YOUR AT-HOME BASKETBALL WORKOUTS. NBC BASKETBALL VIRTUAL CAMP WILL HELP YOU MAKE MASSIVE IMPROVEMENTS IN YOUR BASKETBALL SKILLS FROM THE SAFETY OF YOUR HOME.</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia labore minima quibusdam reiciendis, saepe nostrum quae tempora recusandae quis, aspernatur odit provident non facilis iure praesentium quasi deleniti. Aspernatur dolorem quae, ex at, sint dolore vitae quam voluptatibus sed officiis quaerat harum vero molestias alias ab nesciunt. Quibusdam, dolor possimus!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam alias nesciunt quia veritatis, repellendus animi doloremque nisi ratione officia repellat harum error doloribus ad non est laboriosam? Doloremque rerum animi ex maiores nam, ipsa magnam eum impedit libero facere alias repellendus velit cum quisquam asperiores suscipit beatae deserunt hic nisi!</p>
+
+        <h2>Highlights Include</h2>
+            <ul>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <a href=""><li>View More Details ></li></a>
+            </ul>
+        <hr>
+        <br>    
+        <br>
+        <h1>Camp Details</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo nemo tempore molestiae sit cupiditate dolore iure aliquam voluptate! Possimus incidunt earum facilis tenetur culpa, asperiores perspiciatis quae cumque atque totam dolorem, repellat voluptates quos placeat, non eius porro quam cum nisi. Optio, corrupti laboriosam nemo voluptatem ut eius architecto voluptates officia. Optio incidunt ipsam et, veritatis laborum qui ad aliquid excepturi maxime expedita ex enim, deserunt quam vero maiores voluptates a nobis minima vel temporibus eligendi animi, velit fugit quo? Iusto at amet praesentium fugiat corporis, libero perferendis deleniti laudantium minus provident ipsam consequatur, eaque voluptatibus ad dolores quaerat?</p>
+        <br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos harum voluptates ipsa velit molestiae. Fuga animi sapiente molestias doloribus est, in reprehenderit minima magni vitae neque provident eos maxime aperiam inventore. Odit voluptatum deserunt in sapiente asperiores pariatur cum sit, aperiam accusantium ea rerum sunt ratione quaerat necessitatibus alias voluptatibus corrupti beatae praesentium voluptas, iusto obcaecati perferendis autem non qui. Maxime, tempora. Sit corrupti facere ab reiciendis voluptates. Dolor fuga temporibus odio, ipsa iusto aut!</p>
+        <h2>2020 Virtual Camp Dates:</h2>
+        <ul>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+        </ul>
+
+        <h2>Ages/Camp Types:</h2>
+
+        <p>Virtual Camp- Division I (13-18)</p>
+        <p>Virtual Camp- Division II (10-14)</p>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 100px;">
+
+    {% for camp in camps %}
+    <div class="jumbotron camp-list camp-jumbotron">
+        <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;<h3 style="#fff">{{camp.date}} -
+            {{camp.time}}</h3>
+        <p class="lead" style="color: #fff">{{camp.info}}</p>
+        <hr class="my-4">
+        <p style="color: #fff>" {{camp.info_detail}}</p>
+            <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
+                more</a>
+    </div>
+    {% endfor %}
+
+
+    <!-- <div class="row">
+            <div class="col-sm-12 shop">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="cs" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px;">Coming Soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- <div class="row">
+            <div class="col-sm-12" style="background-color:rgba(225,225,225,0.3);">
+                <img src="{% static 'dream_app/images/logo2.png' %}" style="padding:25px 0px 25px 0px; z-index: -1 ; display: block; margin-left: auto;margin-right: auto; margin-top: 10px"
+                    width="40px" alt="">
+            </div>
+        </div> -->
+</div>
+
+
+
+
+{% endblock %}
