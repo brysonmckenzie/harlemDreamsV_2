@@ -436,10 +436,20 @@
     #cs {
         padding: 100px;
     }
-    /* #front-video {
-        width: 16rem;
-        height: 14rem;
-    } */
+    .front-video {
+        width:98%;
+        border: unset;
+    }
+
+    .camp-main {
+        padding: 25px 50px;
+    }
+    .camp-banner > h1 {
+        font-size: 16pt;
+    }
+    .camp-img {
+        border: unset;
+    }
 }
 
 @media screen and (max-width: 1173px) and (min-width: 576px) {

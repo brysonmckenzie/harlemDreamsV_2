@@ -122,6 +122,7 @@ class Camp(models.Model):
     detail_info = models.TextField(max_length=600, blank=True, null=False)
     event_info = models.TextField(max_length=600, blank=True, null=False)
     event_image = models.ImageField(upload_to='camps')
+    price = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
