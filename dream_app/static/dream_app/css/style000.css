@@ -771,7 +771,7 @@ a:hover {
 
 .cj-txt p {
     width: 100%;
-    margin-top: 75px;
+    /* margin-top: 75px; */
     font-size: 23pt;
     position: relative;
     /* right: 50px; */
@@ -1222,7 +1222,7 @@ a:hover {
 .vid-modal {
     background-size: cover;
     width: 100%;
-    background-image: linear-gradient( rgba(3, 27, 38, 0.7), rgba(3, 27, 38, 0.7)), url(/static/dream_app/images/blue-star-bg.jpg);
+    background-image:url(/static/dream_app/images/blue-star-bg.jpg);
     border-top: #fff solid 2px;
     border-bottom: #fff solid 4px;
     padding: 100px 0px;

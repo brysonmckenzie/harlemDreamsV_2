@@ -382,7 +382,7 @@ table {
     background: rgba(3, 28, 37, 0.8);
     color: black;
     margin: 50px 0px;
-    box-shadow: black 0px 10px 10px;
+    box-shadow: black 0px 0px 10px;
 }
 
 .fix-ball {
@@ -906,22 +906,9 @@ a:hover {
 }
 
 .sha {
-    /* background-image: url(/static/dream_app/images/OLO2ED0.jpg); */
     background-image: url(/static/dream_app/images/full_court.jpg);
     background-size: cover;
     background-attachment: fixed;
-}
-
-#shadow {
-    /* border-bottom: 100px solid rgba(0, 0, 0, 0.9);
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    height: 0;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px; */
 }
 
 #trapezoid {
@@ -1233,18 +1220,22 @@ a:hover {
 /* modal section */
 
 .vid-modal {
-    position: absolute;
-    /* background: linear-gradient(180deg, transparent, #031c25, rgba(3, 28, 37, .8)); */
-    top: 375px;
-    left: 50%;
-    margin: 0 auto;
-    z-index: 1;
-    transform: translateX(-50%);
-    display: initial;
+    background-size: cover;
     width: 100%;
-    height: 70%;
-    background: rgba(0,0,0,0.9);
-    box-shadow: #fff 0px 0px 60px;
+    background-image: linear-gradient( rgba(3, 27, 38, 0.7), rgba(3, 27, 38, 0.7)), url(/static/dream_app/images/blue-star-bg.jpg);
+    border-top: #fff solid 2px;
+    border-bottom: #fff solid 4px;
+    padding: 100px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.price > h3 {
+    font-size: 30pt;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #214F74
 }
 
 #modal-font {
@@ -1256,28 +1247,20 @@ a:hover {
 }
 
 .vid-box {
-    width: 100%;
-    /* height: 400px; */
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    /* vertical-align: middle; */
-    padding: 0 10px;
-    margin-right: 0 auto;
-    box-shadow: black 0px 10px 25px;
+    vertical-align: middle;
     padding-bottom: 10px;
 }
 
-#front-video {
-    width: 50rem;
-    height: 25rem;
+.front-video {
+    width: 60vw;
+    height: 60vh;
     border: 2px white solid;
     margin: 0 auto;
     position: relative;
     right: 0;
     left: 0;
     display: block;
+    background: black;
 }
 
 #vexit {
@@ -1496,7 +1479,7 @@ a:hover {
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
     color: white;
-    font-size: 2515pt;
+    font-size: 15pt;
 }
 
 .no-x {}
@@ -1513,8 +1496,6 @@ a:hover {
     padding: 0px 5px;
     font-weight: bolder;
 }
-
-.vid-a {}
 
 #team-pic {
     margin-top: 75px;
@@ -1617,6 +1598,22 @@ a:hover {
     font-size: 15pt;
     font-weight: bolder;
     letter-spacing: 5px;
+}
+
+.pay {
+    display: inline-block;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+#speaker {
+    color: rgb(104, 236, 43);
+    font-size: 30pt;
+}
+
+#speaker2 {
+    color: red;
+    font-size: 30pt;
 }
 
 #app {
@@ -1798,7 +1795,7 @@ a:hover {
     margin: auto;
     box-shadow: 0px 0px 5px;
     /* width: 95% */
-    width: 720px;
+    width: 820px;
     border: outset 3px #fff
 }
 
@@ -1831,13 +1828,12 @@ a:hover {
 .camp-list>h1 {
     font-family: 'Bebas Neue', sans-serif !important;
     color: #2974B2;
- }
+}
 
 .camp-list>h3 {
     font-family: 'Bebas Neue', sans-serif !important;
     color: #2974B2;
     font-size: 22pt;
-
 }
 
 .camp-detail {
@@ -1861,10 +1857,10 @@ a:hover {
 .camp-event>p {
     text-align: left;
     /* margin-top: 100px; */
-    font-size: 15pt;
+    font-size: 20pt;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
-    text-align: CENTER;
+    text-align: center;
 }
 
 .camp-info>p {
@@ -1899,4 +1895,14 @@ a:hover {
     background: #212529f0;
     border-radius: unset;
     padding: 2rem !important;
+}
+
+.index-vid {
+    height: 1000px;
+}
+
+.camp-main {
+    padding: 100px 200px;
+    color: rgba(3, 27, 38, 0.8);
+    background: rgba(225, 225, 225, 0.6);
 }
