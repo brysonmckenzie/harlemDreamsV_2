@@ -66,7 +66,7 @@
         <br>    
         <br>
         <h1>Camp Details</h1>
-        <p>Harlem Dream Virtual Basketball Camp is a program that will offer a live Zoom workout and leadership/life skills training components. Additionally, camp will help you to remain positive during these challenging times preparing you to succeed on and off the court. 
+        <p>Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and leadership/life skills training components. Additionally, camp will help you to remain positive during these challenging times preparing you to succeed on and off the court. 
         </p>
         <br>
         <h2>2020 Virtual Camp Dates:</h2>
@@ -87,15 +87,20 @@
         <p>Small space where you  an dribble the ball</p>
         <p>Items to use as a cone such as a water bottle etc.</p>
         <p>Zoom free account</p>
+
+        <p style="color: black">Any questions? Please Contact <a href="mailto:info@harlemdreams.net">
+            <i class="fa fa-envelope" style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
     </div>
+
 </div>
 
 <div class="container" style="margin-top: 100px;">
 
     {% for camp in camps %}
     <div class="jumbotron camp-list camp-jumbotron">
-        <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;<h3 style="#fff">{{camp.date}} -
-            {{camp.time}}</h3>
+        <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
+        <!-- <h3 style="#fff">{{camp.date}} -
+            {{camp.time}}</h3> -->
         <p class="lead" style="color: #fff">{{camp.info}}</p>
         <hr class="my-4">
         <p style="color: #fff>" {{camp.info_detail}}</p>

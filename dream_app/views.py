@@ -189,6 +189,8 @@ def camp_detail(request, id):
     camp = Camp.objects.get(id=id)
     camp = get_object_or_404(Camp, id=id)
 
-    context = {'camp': camp}
+    context = {
+        'camp': camp,
+    }
 
     return render(request, 'dream_app/camp_details.html', context)

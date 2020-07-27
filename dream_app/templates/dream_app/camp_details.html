@@ -19,7 +19,9 @@
         <div class="col-sm-12">
             <h2
                 style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px;">
-                {{camp.title}} <br><span class="camp-date" style="color:#2974B2;;">{{camp.date}}</span></h2>
+                {{camp.title}} <br>
+                <span class="camp-date" style="color:#2974B2;;"></span>
+            </h2>
         </div>
     </div>
 
@@ -48,8 +50,14 @@
     </div>
     <div class="row">
         <div class="col-sm-12" style="text-align: center;">
-            <!-- <a class="btn btn-primary btn-lg camp-btn" style="margin: 0 auto; display: block; width: 150px;" href=""role="button">Register</a> -->
-            <div id="paypal-button-container" class="pay"></div>
+            <!-- <a class="btn btn-primary btn-lg camp-btn" style="margin: 0 auto; display: block; width: 150px;" href=""role="button">Register</a> --> 
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="LD395JK8KWTXW">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            
         </div>
 
     </div>
@@ -57,16 +65,6 @@
 
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
-    data-sdk-integration-source="button-factory"></script>
-<script> paypal.Buttons({
-        style: {
-            shape: 'rect', color: 'gold', layout: 'vertical', label: 'buynow',
-        }, createOrder: function (data, actions) { return actions.order.create({ purchase_units: [{ amount: { value: '45' } }] }); }, onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-                alert('Transaction completed by ' + details.payer.name.given_name
-                    + '!');
-            });
-        }
-    }).render('#paypal-button-container'); </script>
+
 {% endblock %}
+

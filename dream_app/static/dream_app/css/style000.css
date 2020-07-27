@@ -978,7 +978,9 @@ a:hover {
     font-family: 'Bebas Neue', sans-serif;
     color: white;
     margin-top: 25px;
-    border-left: 2px solid white;
+    /* border-left: 2px solid white; */
+    /* temporarily changed to text-align center */
+    text-align: center;
 }
 
 .contact-bar a:link {
@@ -1864,7 +1866,8 @@ a:hover {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     text-align: center;
-    color: #414446
+    color: #414446;
+    margin-top: 50px;
 }
 
 .camp-info>p {
