@@ -5,6 +5,7 @@
         background-image: url(/static/dream_app/images/white_hoop.jpg);
         background-size: cover;
         background-position: center;
+        overflow-x: hidden;
     }
 
     #myFooter {
@@ -82,7 +83,7 @@
         <ul>
             {% for camp in camps %}
             {% if camp.details_list_active %}
-            <li><span style="font-weight: bold;">{{camp.title}} </span>  Starting {{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li>
+            <a href="{% url 'camp_detail' id=camp.id %}"><li><span style="font-weight: bold;">{{camp.title}} </span>  Starting {{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li></a>
             <!-- <li>August 1 (Registration deadline – July 30th)</li> -->
             <!-- <li>August 3 (Registration deadline – Aug. 1st)</li>
             <li>August 8 (Registration deadline- Aug 6th)</li>
