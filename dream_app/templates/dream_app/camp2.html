@@ -24,10 +24,10 @@
                 {{title}}</h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm- camp-pic">
-            <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid" width="1080px"
+    <div class="row camp-header">
+        <div class="col-sm-4 img-responsive camp-logo"><img src="{% static 'dream_app/images/logo2.png' %}"/> </div>
+        <div class="col-sm-8 campPic">
+            <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid" 
                 alt="Responsive image">
         </div>
     </div>
@@ -82,7 +82,7 @@
         <ul>
             {% for camp in camps %}
             {% if camp.details_list_active %}
-            <li>{{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li>
+            <li><span style="font-weight: bold;">{{camp.title}} </span>  Starting {{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li>
             <!-- <li>August 1 (Registration deadline – July 30th)</li> -->
             <!-- <li>August 3 (Registration deadline – Aug. 1st)</li>
             <li>August 8 (Registration deadline- Aug 6th)</li>
