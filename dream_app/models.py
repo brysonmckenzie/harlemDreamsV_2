@@ -115,19 +115,18 @@ class Video(models.Model):
 
 class Camp(models.Model):
     title = models.CharField(max_length=100, blank=True, null=True)
-    date = models.DateField(auto_now=False, auto_now_add=False)
-    time = models.TimeField(auto_now=False, auto_now_add=False)
-    info = models.TextField(max_length=600, blank=True, null=False)
-    info_detail = models.TextField(max_length=600, blank=True, null=False)
-    detail_info = models.TextField(max_length=600, blank=True, null=False)
-    event_info = models.TextField(max_length=600, blank=True, null=False)
-    event_image = models.ImageField(upload_to='camps')
+    list_info = models.TextField(max_length=1200, blank=True, null=False)
+    page_intro = models.TextField(max_length=1200, blank=True, null=False)
+    details = models.TextField(max_length=1200, blank=True, null=False)
+    list_image = models.ImageField(upload_to='camps', null=True)
+    image = models.ImageField(upload_to='camps', null=True)
     price = models.IntegerField(blank=True, null=True)
+    paypal_link = models.TextField(max_length=1000, blank=True, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return(self.title + " " + "- Camp set for " + str(self.date))
+        return(self.title)
 
 
 class SiteConfiguration(models.Model):

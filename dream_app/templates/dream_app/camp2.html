@@ -35,38 +35,47 @@
 <div class="row">
     <div class="col-sm-12 camp-main">
         <div class="camp-banner">
-            <h1>LEARN HOW TO MAKE THE MOST OF YOUR AT-HOME BASKETBALL WORKOUTS WITH THE HARLEM DREAMS BASKETBALL VIRTUAL CAMP. WE’LL HELP YOU IMPROVE YOUR BASKETBALL SKILLS FROM THE SAFETY OF YOUR OWN HOME.
+            <h1>LEARN HOW TO MAKE THE MOST OF YOUR AT-HOME BASKETBALL WORKOUTS WITH THE HARLEM DREAMS BASKETBALL VIRTUAL
+                CAMP. WE’LL HELP YOU IMPROVE YOUR BASKETBALL SKILLS FROM THE SAFETY OF YOUR OWN HOME.
             </h1>
         </div>
-        <p>Having a great work ethic is one of the most important skills you must have as an athlete. This, often times, calls for developing a great workout on your own. The Harlem Dreams Virtual Basketball Camps provide you with a workout experience to help you build upon both and to improve your skills. Participate with other campers from around the globe in this amazing virtual camp that’s filled with fun and is a perfect tool to get motivated.
+        <p>Having a great work ethic is one of the most important skills you must have as an athlete. This, often times,
+            calls for developing a great workout on your own. The Harlem Dreams Virtual Basketball Camps provide you
+            with a workout experience to help you build upon both and to improve your skills. Participate with other
+            campers from around the globe in this amazing virtual camp that’s filled with fun and is a perfect tool to
+            get motivated.
         </p>
         <br>
-        <p>Campers will be paired with a Harlem Dreams player that matches their position. Camp will be conducted via zoom and last 60 minutes. At the end of each session, campers will have an opportunity to participate in a Q & A with a Harlem Dreams player. Camp will also include motivation and life skills training.
+        <p>Campers will be paired with a Harlem Dreams player that matches their position. Camp will be conducted via
+            zoom and last 60 minutes. At the end of each session, campers will have an opportunity to participate in a Q
+            & A with a Harlem Dreams player. Camp will also include motivation and life skills training.
         </p>
 
         <h2>Highlights Include</h2>
-            <ul>
-                <li>Professional athlete, committed to your success.</li>
-                <li>Concentrated skill development customized for at home workouts.</li>
-                <li>Leadership training and character development.
-                </li>
-                <li>Accountability for basketball and life. 
-                </li>
-                <li>An enthusiastic, respectful, and encouraging atmosphere with high expectation
-                </li>
-                <li>Access to coaches in through supervised chat rooms to gain more advice and direction. 
-                </li>
-                <li>Interactive Live Zoom ball-handling workouts.
-                </li>
-                <li>Rigorous workouts and drills to challenge and inspire you
-                </li>
-                <li>A super-fun experience</li>
-            </ul>
+        <ul>
+            <li>Professional athlete, committed to your success.</li>
+            <li>Concentrated skill development customized for at home workouts.</li>
+            <li>Leadership training and character development.
+            </li>
+            <li>Accountability for basketball and life.
+            </li>
+            <li>An enthusiastic, respectful, and encouraging atmosphere with high expectation
+            </li>
+            <li>Access to coaches in through supervised chat rooms to gain more advice and direction.
+            </li>
+            <li>Interactive Live Zoom ball-handling workouts.
+            </li>
+            <li>Rigorous workouts and drills to challenge and inspire you
+            </li>
+            <li>A super-fun experience</li>
+        </ul>
         <hr>
-        <br>    
+        <br>
         <br>
         <h1>Camp Details</h1>
-        <p>Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and leadership/life skills training components. Additionally, camp will help you to remain positive during these challenging times preparing you to succeed on and off the court. 
+        <p>Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and leadership/life
+            skills training components. Additionally, camp will help you to remain positive during these challenging
+            times preparing you to succeed on and off the court.
         </p>
         <br>
         <h2>2020 Virtual Camp Dates:</h2>
@@ -81,15 +90,22 @@
             <li>August 29th (Registration deadline- Aug 27th)</li>
         </ul>
 
-        <h2>What You Need</h2>
+        <h2>What You Will Need</h2>
+        <ul>
+            <li>Basketball (no basket needed)</li>
+            <li>Small space where you an dribble the ball</li>
+            <li>Items to use as a cone such as a water bottle etc.</li>
+            <li>Zoom free account</li>
 
+        </ul>
         <p>Basketball(no basket needed)</p>
-        <p>Small space where you  an dribble the ball</p>
+        <p>Small space where you an dribble the ball</p>
         <p>Items to use as a cone such as a water bottle etc.</p>
         <p>Zoom free account</p>
 
         <p style="color: black">Any questions? Please Contact <a href="mailto:info@harlemdreams.net">
-            <i class="fa fa-envelope" style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
+                <i class="fa fa-envelope"
+                    style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
     </div>
 
 </div>
@@ -97,11 +113,23 @@
 <div class="container" style="margin-top: 100px;">
 
     {% for camp in camps %}
-    <div class="jumbotron camp-list camp-jumbotron">
-        <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
-        <!-- <h3 style="#fff">{{camp.date}} -
+    <div class="jumbotron  camp-jumbotron">
+        <div class="row">
+            <div class="col-sm-12 camp-list">
+                <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
+                <!-- <h3 style="#fff">{{camp.date}} -
             {{camp.time}}</h3> -->
-        <p class="lead" style="color: #fff">{{camp.info}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img style="width: 100%;" class="img-responsive" src="{{camp.list_image.url}}" alt="">
+            </div>
+            <div class="col-sm-8">
+                <p class="lead" style="color: #fff">{{camp.list_info}}</p>
+            </div>
+
+        </div>
         <hr class="my-4">
         <p style="color: #fff>" {{camp.info_detail}}</p>
             <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn

@@ -19,7 +19,7 @@
         <div class="col-sm-12">
             <h2
                 style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px;">
-                {{camp.title}} <br>
+                {{camp.title}} <br><hr>
                 <span class="camp-date" style="color:#2974B2;;"></span>
             </h2>
         </div>
@@ -27,21 +27,32 @@
 
     <div class="row">
         <div class="col-sm-6 camp-event">
-            <p>{{camp.event_info}}</p>
+            <p>{{camp.page_intro}}</p>
         </div>
         <div class="col-sm-6 camp-detail">
-            <img class="" src="{{camp.event_image.url}}" alt="">
+            <img class="" src="{{camp.image.url}}" alt="">
         </div>
-        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+            </div> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+            <br>
+            <hr>
+
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-12 camp-info">
             <h1>Camp Details</h1>
-            <p>{{camp.detail_info}}</p>
-            <br>
-            <hr>
+            <p>{{camp.details|safe}}</p>
         </div>
     </div>
+  
 
     <div class="row">
         <div class="col-sm-12 price">
@@ -51,13 +62,13 @@
     <div class="row">
         <div class="col-sm-12" style="text-align: center;">
             <!-- <a class="btn btn-primary btn-lg camp-btn" style="margin: 0 auto; display: block; width: 150px;" href=""role="button">Register</a> --> 
-            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="LD395JK8KWTXW">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <input style="height: 2.5em" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            
+                </form> -->
+            {{camp.paypal_link|safe}}
         </div>
 
     </div>
