@@ -448,7 +448,32 @@
         font-size: 16pt;
     }
     .camp-img {
+        /* border: unset; */
+        box-shadow: unset;
+    }
+
+    .camp-logo > img {
+        width: 50%;
+        display: block;
+        position: unset;
+        top: unset;
+        transform: unset;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .campPic-logo > img {
+        width: 100%;
+        display: block;
+        position: unset;
+        top: unset;
+        transform: unset;
+    }
+    .camp-header {
         border: unset;
+        width: 90%;
+        margin: 0 auto;
+        background: unset;
+        box-shadow: unset;
     }
 }
 
