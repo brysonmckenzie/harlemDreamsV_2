@@ -80,14 +80,19 @@
         <br>
         <h2>2020 Virtual Camp Dates:</h2>
         <ul>
-            <li>August 1 (Registration deadline – July 30th)</li>
-            <li>August 3 (Registration deadline – Aug. 1st)</li>
+            {% for camp in camps %}
+            {% if camp.details_list_active %}
+            <li>{{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li>
+            <!-- <li>August 1 (Registration deadline – July 30th)</li> -->
+            <!-- <li>August 3 (Registration deadline – Aug. 1st)</li>
             <li>August 8 (Registration deadline- Aug 6th)</li>
             <li>August 10th (Registration deadline August 7th)</li>
             <li>August 15th (Registration deadline- August 13th)</li>
             <li>August 17th (Registration deadline- Aug 14th)</li>
             <li>August 22nd (Registration deadline- Aug 20th)</li>
-            <li>August 29th (Registration deadline- Aug 27th)</li>
+            <li>August 29th (Registration deadline- Aug 27th)</li> -->
+            {% endif %}
+            {% endfor %}
         </ul>
 
         <h2>What You Will Need</h2>
@@ -113,6 +118,7 @@
 <div class="container" style="margin-top: 100px;">
 
     {% for camp in camps %}
+    {% if camp.active %}
     <div class="jumbotron  camp-jumbotron">
         <div class="row">
             <div class="col-sm-12 camp-list">
@@ -126,7 +132,7 @@
                 <img style="width: 100%;" class="img-responsive" src="{{camp.list_image.url}}" alt="">
             </div>
             <div class="col-sm-8">
-                <p class="lead" style="color: #fff">{{camp.list_info}}</p>
+                <p class="lead" style="font-weight: 500; color:#2974B2">{{camp.list_info}}</p>
             </div>
 
         </div>
@@ -135,6 +141,7 @@
             <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
                 more</a>
     </div>
+    {% endif %}
     {% endfor %}
 
 

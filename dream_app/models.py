@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+import datetime
 
 
 class Event(models.Model):
@@ -115,6 +116,10 @@ class Video(models.Model):
 
 class Camp(models.Model):
     title = models.CharField(max_length=100, blank=True, null=True)
+    date_of_camp = models.CharField(max_length=150, blank=True, null=True)
+    deadline = models.CharField(max_length=150, blank=True, null=True)
+    details_list_active = models.BooleanField(default=True)
+    active = models.BooleanField(default=True)
     list_info = models.TextField(max_length=1200, blank=True, null=False)
     page_intro = models.TextField(max_length=1200, blank=True, null=False)
     details = models.TextField(max_length=1200, blank=True, null=False)
@@ -130,6 +135,7 @@ class Camp(models.Model):
 
 
 class SiteConfiguration(models.Model):
+
     camp_title = models.CharField(blank=True, null=True, max_length=50)
     facebook = models.CharField(max_length=150, blank=True, null=True)
     instagram = models.CharField(max_length=150, blank=True, null=True)
@@ -137,6 +143,7 @@ class SiteConfiguration(models.Model):
     homepage_phone = models.CharField(max_length=15, blank=True, null=True)
     contact_page_phone = models.CharField(max_length=15, blank=True, null=True)
     contact_email = models.CharField(max_length=40, blank=True, null=True)
+    main_videoID_YouTube = models.CharField(max_length=80, blank=True, null=True)
     carousel_off = models.BooleanField(default=True)
 
     def __str__(self):

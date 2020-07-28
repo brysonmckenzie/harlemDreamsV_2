@@ -1832,7 +1832,7 @@ a:hover {
 
 .camp-list>h1 {
     font-family: 'Bebas Neue', sans-serif !important;
-    color: #2974B2;
+    color: #214F74;
 }
 
 .camp-list>h3 {
@@ -1889,7 +1889,8 @@ a:hover {
     font-weight: 800;
     text-align: center;
     margin: 50px 0px;
-    color: #2974B2;
+    /* color: #2974B2; */
+    color: #214F74;
 }
 
 .camp-info>p {
@@ -1904,9 +1905,10 @@ a:hover {
 }
 
 .camp-jumbotron {
-    background: #212529f0;
-    border-radius: unset;
+    /* background: #212529f0; */
+    border-radius: 10px;
     padding: 2rem !important;
+    background: rgba(225, 225, 225, 0.95);
 }
 
 .index-vid {
