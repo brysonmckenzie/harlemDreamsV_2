@@ -36,7 +36,7 @@
 
     }
 
-    @media screen and (min-width: 577px) and (max-width: 992px) {}
+    @media screen and (min-width: 577px) and (max-width: 992px)
 </style>
 
 <div class="container">
@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container">
     <div class="row camp-header">
         <div class="col-lg-4 img-responsive camp-logo"><img src="{% static 'dream_app/images/logo2.png' %}" /> </div>
         <div class="col-lg-8 campPic d-md-none d-lg-block">
@@ -104,7 +104,8 @@
             <br>
             <br>
             <h1>Camp Details</h1>
-            <p class="camp-details">Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and
+            <p class="camp-details">Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom
+                workout and
                 leadership/life
                 skills training components. Additionally, camp will help you to remain positive during these challenging
                 times preparing you to succeed on and off the court.
@@ -148,36 +149,36 @@
                     <i class="fa fa-envelope"
                         style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
         </div>
-
     </div>
+</div>
 
-    <div class="container" style="margin-top: 100px;">
+<div class="container" style="margin-top: 100px;">
 
-        {% for camp in camps %}
-        {% if camp.active %}
-        <div class="jumbotron  camp-jumbotron">
-            <div class="row">
-                <div class="col-sm-12 camp-list">
-                    <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
-                    <!-- <h3 style="#fff">{{camp.date}} -
+    {% for camp in camps %}
+    {% if camp.active %}
+    <div class="jumbotron  camp-jumbotron">
+        <div class="row">
+            <div class="col-sm-12 camp-list">
+                <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
+                <!-- <h3 style="#fff">{{camp.date}} -
             {{camp.time}}</h3> -->
-                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <img style="width: 100%;" class="img-responsive" src="{{camp.list_image.url}}" alt="">
-                </div>
-                <div class="col-sm-8">
-                    <p class="lead" style="font-weight: 500; color:#2974B2">{{camp.list_info}}</p>
-                </div>
-
-            </div>
-            <hr class="my-4">
-            <p style="color: #fff>" {{camp.info_detail}}</p>
-                <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
-                    more</a>
         </div>
-        {% endif %}
-        {% endfor %}
+        <div class="row">
+            <div class="col-sm-4">
+                <img style="width: 100%;" class="img-responsive camp-ball" src="{{camp.list_image.url}}" alt="">
+            </div>
+            <div class="col-sm-8">
+                <p class="lead" style="font-weight: 500; color:#2974B2">{{camp.list_info}}</p>
+            </div>
+
+        </div>
+        <hr class="my-4">
+        <p style="color: #fff>" {{camp.info_detail}}</p>
+            <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
+                more</a>
     </div>
-    {% endblock %}
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

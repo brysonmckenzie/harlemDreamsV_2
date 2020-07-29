@@ -302,6 +302,12 @@
         margin-bottom: 150px;
         border: #fff 2px solid;
     }
+
+    .camp-ball {
+    width: 16rem;
+    display: block;
+    /* margin: 0 auto; */
+}
     
     #front-video {
         width: 100%;
