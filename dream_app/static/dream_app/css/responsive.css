@@ -456,6 +456,7 @@
     .camp-img {
         /* border: unset; */
         box-shadow: unset;
+        width: 100%;
     }
     .camp-event > p {
         text-align: center ;
