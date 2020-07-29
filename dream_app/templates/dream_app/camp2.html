@@ -5,165 +5,179 @@
         background-image: url(/static/dream_app/images/white_hoop.jpg);
         background-size: cover;
         background-position: center;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
+
 
     #myFooter {
         padding-top: 9px;
     }
 
     @media screen and (max-width: 992px) {
-        .camp-btn {}
+        .camp-logo>img {
+            width: 50%;
+            margin: 0 auto;
+            position: unset;
+            transform: unset;
+            margin-bottom: 50px;
+        }
+
+        .camp-header {
+            background: rgb(245 245 245 / .8);
+            padding: 25px;
+            margin-bottom: 50px;
+        }
+
+        .camp-main {
+            padding: 25px 50px;
+            background: rgba(225, 225, 225, 0.6);
+        }
+
+
     }
+
+    @media screen and (min-width: 577px) and (max-width: 992px) {}
 </style>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h2
-                style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px;">
+            <h2 class="camp-title"
+                style="margin-top:25px; font-family: 'Bebas Neue', sans-serif; text-align: center; font-size:48pt; color:#214F74; background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)); margin: 50px;">
                 {{title}}</h2>
         </div>
     </div>
+</div>
+<div class="container-fluid">
     <div class="row camp-header">
-        <div class="col-sm-4 img-responsive camp-logo"><img src="{% static 'dream_app/images/logo2.png' %}"/> </div>
-        <div class="col-sm-8 campPic">
-            <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid" 
+        <div class="col-lg-4 img-responsive camp-logo"><img src="{% static 'dream_app/images/logo2.png' %}" /> </div>
+        <div class="col-lg-8 campPic d-md-none d-lg-block">
+            <img src="{% static 'dream_app/images/4.jpg' %}" class="camp-img img-fluid img-responsive"
                 alt="Responsive image">
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-12 camp-main">
-        <div class="camp-banner">
-            <h1>LEARN HOW TO MAKE THE MOST OF YOUR AT-HOME BASKETBALL WORKOUTS WITH THE HARLEM DREAMS BASKETBALL VIRTUAL
-                CAMP. WE’LL HELP YOU IMPROVE YOUR BASKETBALL SKILLS FROM THE SAFETY OF YOUR OWN HOME.
-            </h1>
-        </div>
-        <p>Having a great work ethic is one of the most important skills you must have as an athlete. This, often times,
-            calls for developing a great workout on your own. The Harlem Dreams Virtual Basketball Camps provide you
-            with a workout experience to help you build upon both and to improve your skills. Participate with other
-            campers from around the globe in this amazing virtual camp that’s filled with fun and is a perfect tool to
-            get motivated.
-        </p>
-        <br>
-        <p>Campers will be paired with a Harlem Dreams player that matches their position. Camp will be conducted via
-            zoom and last 60 minutes. At the end of each session, campers will have an opportunity to participate in a Q
-            & A with a Harlem Dreams player. Camp will also include motivation and life skills training.
-        </p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 camp-main">
+            <div class="camp-banner">
+                <h1>LEARN HOW TO MAKE THE MOST OF YOUR AT-HOME BASKETBALL WORKOUTS WITH THE HARLEM DREAMS BASKETBALL
+                    VIRTUAL
+                    CAMP. WE’LL HELP YOU IMPROVE YOUR BASKETBALL SKILLS FROM THE SAFETY OF YOUR OWN HOME.
+                </h1>
+            </div>
+            <p>Having a great work ethic is one of the most important skills you must have as an athlete. This, often
+                times,
+                calls for developing a great workout on your own. The Harlem Dreams Virtual Basketball Camps provide you
+                with a workout experience to help you build upon both and to improve your skills. Participate with other
+                campers from around the globe in this amazing virtual camp that’s filled with fun and is a perfect tool
+                to
+                get motivated.
+            </p>
+            <br>
+            <p>Campers will be paired with a Harlem Dreams player that matches their position. Camp will be conducted
+                via
+                zoom and last 60 minutes. At the end of each session, campers will have an opportunity to participate in
+                a Q
+                & A with a Harlem Dreams player. Camp will also include motivation and life skills training.
+            </p>
 
-        <h2>Highlights Include</h2>
-        <ul>
-            <li>Professional athlete, committed to your success.</li>
-            <li>Concentrated skill development customized for at home workouts.</li>
-            <li>Leadership training and character development.
-            </li>
-            <li>Accountability for basketball and life.
-            </li>
-            <li>An enthusiastic, respectful, and encouraging atmosphere with high expectation
-            </li>
-            <li>Access to coaches in through supervised chat rooms to gain more advice and direction.
-            </li>
-            <li>Interactive Live Zoom ball-handling workouts.
-            </li>
-            <li>Rigorous workouts and drills to challenge and inspire you
-            </li>
-            <li>A super-fun experience</li>
-        </ul>
-        <hr>
-        <br>
-        <br>
-        <h1>Camp Details</h1>
-        <p>Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and leadership/life
-            skills training components. Additionally, camp will help you to remain positive during these challenging
-            times preparing you to succeed on and off the court.
-        </p>
-        <br>
-        <h2>2020 Virtual Camp Dates:</h2>
-        <ul>
-            {% for camp in camps %}
-            {% if camp.details_list_active %}
-            <a href="{% url 'camp_detail' id=camp.id %}"><li><span style="font-weight: bold;">{{camp.title}} </span>  Starting {{camp.date_of_camp}} (Registration deadline – {{camp.deadline}})</li></a>
-            <!-- <li>August 1 (Registration deadline – July 30th)</li> -->
-            <!-- <li>August 3 (Registration deadline – Aug. 1st)</li>
+            <h2>Highlights Include</h2>
+            <ul>
+                <li>Professional athlete, committed to your success.</li>
+                <li>Concentrated skill development customized for at home workouts.</li>
+                <li>Leadership training and character development.
+                </li>
+                <li>Accountability for basketball and life.
+                </li>
+                <li>An enthusiastic, respectful, and encouraging atmosphere with high expectation
+                </li>
+                <li>Access to coaches in through supervised chat rooms to gain more advice and direction.
+                </li>
+                <li>Interactive Live Zoom ball-handling workouts.
+                </li>
+                <li>Rigorous workouts and drills to challenge and inspire you
+                </li>
+                <li>A super-fun experience</li>
+            </ul>
+            <hr>
+            <br>
+            <br>
+            <h1>Camp Details</h1>
+            <p class="camp-details">Harlem Dreams Virtual Basketball Camp is a program that will offer a live Zoom workout and
+                leadership/life
+                skills training components. Additionally, camp will help you to remain positive during these challenging
+                times preparing you to succeed on and off the court.
+            </p>
+            <br>
+            <h2>2020 Virtual Camp Dates:</h2>
+            <ul>
+                {% for camp in camps %}
+                {% if camp.details_list_active %}
+                <a href="{% url 'camp_detail' id=camp.id %}">
+                    <li><span style="font-weight: bold;">{{camp.title}} </span> Starting {{camp.date_of_camp}}
+                        (Registration
+                        deadline – {{camp.deadline}})</li>
+                </a>
+                <!-- <li>August 1 (Registration deadline – July 30th)</li> -->
+                <!-- <li>August 3 (Registration deadline – Aug. 1st)</li>
             <li>August 8 (Registration deadline- Aug 6th)</li>
             <li>August 10th (Registration deadline August 7th)</li>
             <li>August 15th (Registration deadline- August 13th)</li>
             <li>August 17th (Registration deadline- Aug 14th)</li>
             <li>August 22nd (Registration deadline- Aug 20th)</li>
             <li>August 29th (Registration deadline- Aug 27th)</li> -->
-            {% endif %}
-            {% endfor %}
-        </ul>
+                {% endif %}
+                {% endfor %}
+            </ul>
 
-        <h2>What You Will Need</h2>
-        <ul>
-            <li>Basketball (no basket needed)</li>
-            <li>Small space where you an dribble the ball</li>
-            <li>Items to use as a cone such as a water bottle etc.</li>
-            <li>Zoom free account</li>
+            <h2>What You Will Need</h2>
+            <ul>
+                <li>Basketball (no basket needed)</li>
+                <li>Small space where you an dribble the ball</li>
+                <li>Items to use as a cone such as a water bottle etc.</li>
+                <li>Zoom free account</li>
 
-        </ul>
-        <p>Basketball(no basket needed)</p>
-        <p>Small space where you an dribble the ball</p>
-        <p>Items to use as a cone such as a water bottle etc.</p>
-        <p>Zoom free account</p>
+            </ul>
+            <p>Basketball(no basket needed)</p>
+            <p>Small space where you an dribble the ball</p>
+            <p>Items to use as a cone such as a water bottle etc.</p>
+            <p>Zoom free account</p>
 
-        <p style="color: black">Any questions? Please Contact <a href="mailto:info@harlemdreams.net">
-                <i class="fa fa-envelope"
-                    style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
+            <p style="color: black">Any questions? Please Contact <a href="mailto:info@harlemdreams.net">
+                    <i class="fa fa-envelope"
+                        style="color: rgba(3, 28, 37, 0.8); font-size: 12pt;"></i>&nbsp;info@harlemdreams.net</a></p>
+        </div>
+
     </div>
 
-</div>
+    <div class="container" style="margin-top: 100px;">
 
-<div class="container" style="margin-top: 100px;">
-
-    {% for camp in camps %}
-    {% if camp.active %}
-    <div class="jumbotron  camp-jumbotron">
-        <div class="row">
-            <div class="col-sm-12 camp-list">
-                <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
-                <!-- <h3 style="#fff">{{camp.date}} -
+        {% for camp in camps %}
+        {% if camp.active %}
+        <div class="jumbotron  camp-jumbotron">
+            <div class="row">
+                <div class="col-sm-12 camp-list">
+                    <h1 class="display-4" style="text-align: center">{{camp.title}}</h1>&nbsp;
+                    <!-- <h3 style="#fff">{{camp.date}} -
             {{camp.time}}</h3> -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <img style="width: 100%;" class="img-responsive" src="{{camp.list_image.url}}" alt="">
-            </div>
-            <div class="col-sm-8">
-                <p class="lead" style="font-weight: 500; color:#2974B2">{{camp.list_info}}</p>
-            </div>
-
-        </div>
-        <hr class="my-4">
-        <p style="color: #fff>" {{camp.info_detail}}</p>
-            <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
-                more</a>
-    </div>
-    {% endif %}
-    {% endfor %}
-
-
-    <!-- <div class="row">
-            <div class="col-sm-12 shop">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p id="cs" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px;">Coming Soon!</p>
-                    </div>
                 </div>
             </div>
-        </div> -->
-    <!-- <div class="row">
-            <div class="col-sm-12" style="background-color:rgba(225,225,225,0.3);">
-                <img src="{% static 'dream_app/images/logo2.png' %}" style="padding:25px 0px 25px 0px; z-index: -1 ; display: block; margin-left: auto;margin-right: auto; margin-top: 10px"
-                    width="40px" alt="">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img style="width: 100%;" class="img-responsive" src="{{camp.list_image.url}}" alt="">
+                </div>
+                <div class="col-sm-8">
+                    <p class="lead" style="font-weight: 500; color:#2974B2">{{camp.list_info}}</p>
+                </div>
+
             </div>
-        </div> -->
-</div>
-
-
-
-
-{% endblock %}
+            <hr class="my-4">
+            <p style="color: #fff>" {{camp.info_detail}}</p>
+                <a class="btn btn-primary btn-lg camp-btn" href="{% url 'camp_detail' id=camp.id %}" role="button">Learn
+                    more</a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endblock %}

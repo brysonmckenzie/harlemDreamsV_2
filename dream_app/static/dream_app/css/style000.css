@@ -1245,7 +1245,7 @@ a:hover {
     color: whitesmoke;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 10px;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .vid-box {
@@ -1792,6 +1792,11 @@ a:hover {
     margin: 0 0 50px 0;
 }
 
+.camp-banner > h1 {
+    font-size: 25pt;
+    font-weight: 500;
+}
+
 .camp-detail>img {
     display: block;
     margin: 0 auto;
@@ -1805,12 +1810,12 @@ a:hover {
 }
 
 .camp-header {
-    background: rgb(245 245 245 / .8);
-    border: #214F74 outset 3px;
+    background: rgb(245, 245, 245, 1);
+    /* border: #214F74 solid 3px; */
     padding: 25px;
-    box-shadow: 0px 0px 10px;
+    /* box-shadow: 0px 0px 10px; */
+    margin-bottom: 50px;
 }
-
 .camp-btn {
     background: rgba(3, 28, 37, 0.8)!important;
     border: none;
@@ -1895,7 +1900,7 @@ a:hover {
 }
 
 .camp-info>p {
-    font-size: 18pt;
+    font-size: 20pt;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     /* text-align: center; */

@@ -451,6 +451,22 @@
         /* border: unset; */
         box-shadow: unset;
     }
+    .camp-event > p {
+        text-align: center ;
+    }
+
+    .camp-title {
+        /* margin-top: 25px; */
+        /* font-family: 'Bebas Neue', sans-serif; */
+        /* text-align: center; */
+        font-size: 24pt;
+        /* color: #214F74; */
+        /* background: linear-gradient(-90deg, rgba(245,245,245,0.0),white, rgba(245,245,245,0.0)) margin: 52px; */
+    } 
+
+    .camp-details {
+        text-align: center;
+    }
 
     .camp-logo > img {
         width: 50%;
@@ -474,6 +490,12 @@
         margin: 0 auto;
         background: unset;
         box-shadow: unset;
+    }
+    .lead {
+        font-weight: 500;
+        font-size: 14pt;
+        color: #214F74 !important;
+        text-align: center;
     }
 }
 
